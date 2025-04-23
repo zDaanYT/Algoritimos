@@ -15,4 +15,5 @@ Contribuições são sempre bem-vindas. Sinta-se à vontade para abrir um Issue 
 ## Contatos
 
 <a href="https://github.com/zDaanYT" target="_blank"><img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red)" alt="Email"></a>
-<a href="https://discord.com/channels/353704118038298626" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+<a href="https://discord.com/invite/v8ZqdXh" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+<a href="https://www.instagram.com/mr.danilo__/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Discord"></a>
