@@ -11,10 +11,10 @@ INÍCIO
 		ESCREVA "Informe a ",i,"ª idade"; LEIA idade;
 
 		SE idade >= 18
-			ENTÃO 
-				ESCREVA "A pessoa n.º",i," é maior de idade!";
-			SENÃO
-				ESCREVA "A pessoa n.º",i," é menor de idade!";
+		ENTÃO 
+			ESCREVA "A pessoa n.º",i," é maior de idade!";
+		SENÃO
+			ESCREVA "A pessoa n.º",i," é menor de idade!";
 	
 	FIM_PARA;
 
