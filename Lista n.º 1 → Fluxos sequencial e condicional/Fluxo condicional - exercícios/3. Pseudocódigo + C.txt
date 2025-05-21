@@ -17,10 +17,14 @@ INÍCIO
 	media = n1 + n2 + n3 / 3;
 
 	SE media >= 7.0
-			ENTÃO ESCREVA "O(A) aluno(a) ",nome," está aprovado(a)!";
-			SENÃO SE media <= 5.0
-					ENTÃO ESCREVA "O(A) aluno(a) ",nome," está reprovado(a)!";
-					SENÃO SE media >= 5.1 .E. media <= 6.9
+			ENTÃO 
+				ESCREVA "O(A) aluno(a) ",nome," está aprovado(a)!";
+			SENÃO 
+				SE media <= 5.0
+					ENTÃO 
+						ESCREVA "O(A) aluno(a) ",nome," está reprovado(a)!";
+					SENÃO 
+						SE media >= 5.1 .E. media <= 6.9
 							ENTÃO ESCREVA "O(A) aluno(a) ",nome," está de exame!";
 
 
@@ -28,14 +32,12 @@ FIM.
 
 
 
-+-------------+
-| LINGUAGEM C |
-+-------------+
++---------------+
+|	C	|
++---------------+
 
 #include <stdio.h>
-#include <conio.h>
 #include <locale.h>
-#include <string.h>
 
 main(){
 
