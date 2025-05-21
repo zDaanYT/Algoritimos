@@ -21,14 +21,12 @@ FIM.
 
 
 
-+-------------+
-| LINGUAGEM C |
-+-------------+
++---------------+
+|	C	|
++---------------+
 
 #include <stdio.h>
-#include <conio.h>
 #include <locale.h>
-#include <string.h>
 
 main(){
 
