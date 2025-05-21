@@ -41,7 +41,7 @@ main(){
 
 	if(v1 > 100 && v1 < 200){
 		printf("O valor %1.1f está no intervalo entre 100 e 200.\n", v1);
-		}else
-			printf("O valor %1.1f está fora do intervalo entre 100 e 200.\n", v1);
+	}else
+		printf("O valor %1.1f está fora do intervalo entre 100 e 200.\n", v1);
 
 }
