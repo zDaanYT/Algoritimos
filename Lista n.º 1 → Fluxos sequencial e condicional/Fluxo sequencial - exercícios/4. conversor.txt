@@ -1,0 +1,45 @@
+Algoritimo conversor_dolar_real
+
+inicio
+	var 
+	real: v_dolar, cambio, v_real;
+	
+	escreva "Digite o cambio do Dólar: "; leia cambio;
+	escreva "Digite o valor possuído em Dólar US$: "; leia v_dolar;
+	
+	v_real = v_dolar * cambio;
+	
+	escreva "O valor em sua conta corrente é de R$: %1.2f.",v_real;
+fim.
+
+
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float v_dolar, cambio, v_real;
+	setlocale(LC_ALL,"Portuguese");
+	
+	// ENTRADA
+	
+	printf("Digite o cambio do Dólar R$: ");
+	scanf("%f", &cambio);
+	printf("Digite o valor possuído em Dólar US$: ");
+	scanf("%f", &v_dolar);
+
+	// PROCESSAMENTO
+
+	v_real = v_dolar * cambio;
+
+	// SAIDA
+
+	printf("O valor em sua conta corrente é de R$: %1.2f.",v_real);
+	getch();
+
+}

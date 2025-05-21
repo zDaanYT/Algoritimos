@@ -1,0 +1,45 @@
+Algoritimo IMC
+
+inicio
+	var 
+	real: massa, altura, imc;
+	
+	escreva "Informe a sua altura em metros: "; leia altura;
+	escreva "Informe sua massa em kg: "; leia massa;
+	
+	imc = massa / (altura * altura);
+	
+	escreva "O seu IMC é de ",imc;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float massa, altura ;
+
+	setlocale(LC_ALL,"Portuguese");
+
+	// ENTRADA
+
+	printf("Informe sua massa em kg: ");
+	scanf("%f", &massa);
+
+	printf("Informe a sua altura em metros: ");
+	scanf("%f", &altura);
+
+	// PROCESSAMENTO
+
+	// imc = massa / (altura**2);
+
+	// SAIDA
+
+	printf("O seu IMC é de %1.2f",massa / (altura * altura));
+	getch();
+
+}

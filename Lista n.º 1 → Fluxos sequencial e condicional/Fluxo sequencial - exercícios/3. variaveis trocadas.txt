@@ -1,0 +1,51 @@
+Algoritimo variaveis_trocadas
+
+inicio
+	var 
+	inteiro: A, B, auxiliar;
+	
+	escreva "Digite o valor da variável A: "; leia A;
+	escreva "Digite o valor da variável B: "; leia B;
+
+	auxiliar = A;
+	A = B;
+	B = auxiliar;
+	
+	escreva "O valor da variável A é %d e o valor da variável B é %d ",A, B;
+
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	int a, b, auxiliar;
+	
+	setlocale(LC_ALL,"Portuguese");
+
+   	 // ENTRADA
+
+    	printf("Informe a variável A: ");
+    	scanf("%d", &a);
+
+   	 printf("Informe a variável B: ");
+    	scanf("%d", &b);
+
+    	// PROCESSAMENTO
+
+   	auxiliar = a;
+	a = b;
+   	b = auxiliar;
+
+   	// SAIDA
+
+   	printf("O valor trocado de A e B é respectivamente: %d e %d", a ,b);
+  	getch();
+
+}
+

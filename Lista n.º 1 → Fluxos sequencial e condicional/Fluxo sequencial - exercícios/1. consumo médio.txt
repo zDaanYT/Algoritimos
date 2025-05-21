@@ -1,0 +1,44 @@
+Algoritimo consumo_medio
+
+inicio
+	var real: dist, comb, consumo;
+	
+	escreva "Qual foi a distância percorrida?"; leia dist;
+	escreva "Quantos litros de combustivel foi gasto?"; leia comb;
+
+	consumo = dist/comb;
+	
+	escreva "O consumo médio é de %1.2f km/l",consumo;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+    float dist, comb, consumo; // SALÁRIO
+
+    setlocale(LC_ALL,"Portuguese");
+
+    // ENTRADA
+
+    printf("Qual foi a distância percorrida? ");
+    scanf("%f", &dist);
+
+    printf("Quantos litros de combustivel foi gasto? ");
+    scanf("%f", &comb);
+
+    // PROCESSAMENTO
+
+    consumo = dist / comb;
+
+    // SAIDA
+
+    printf("O consumo médio é de %1.2f km/l",consumo);
+    getch();
+
+}

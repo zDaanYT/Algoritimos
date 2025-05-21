@@ -1,0 +1,40 @@
+Algoritimo velocidade_media
+
+inicio
+	var 
+	real: v_media, delocamento, tempo;
+	
+	escreva "Informe a Variação do deslocamento (ΔS) em metros: "; leia deslocamento;
+	escreva "Informe a Variação do tempo (ΔT) em segundos: "; leia v_media;
+
+	tempo = deslocamento / v_media;
+
+	escreva "O tempo necessário para percorrer a distância é de ",tempo;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float v_media, deslocamento;
+
+	setlocale(LC_ALL,"Portuguese");
+
+	// ENTRADA
+
+	printf("Informe a Variação do deslocamento em metros: ");
+	scanf("%f", &deslocamento);
+
+	printf("Informe a Velocidade média em km/h: ");
+	scanf("%f", &v_media);
+
+	// SAIDA
+
+	printf("O tempo necessário para percorrer a distância é de %1.2f segundos\n", deslocamento / v_media);
+
+}

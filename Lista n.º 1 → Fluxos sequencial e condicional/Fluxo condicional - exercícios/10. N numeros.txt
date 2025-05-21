@@ -1,0 +1,70 @@
+Algoritimo n_numeros
+
+inicio
+	var 
+	real: numero;
+	inteiro: i, n_numero; // TOTAIS + INCREMETO
+
+
+	escreva "Quantos números deseja analisar? "; leia n_numero;
+
+	para i de 1 até n_numero faça
+		escreva "Analise nº",i;
+		escreva "Informe um número: "; leia numero;
+		
+		se numero > 0
+			então escreva numero," é positivo.";
+			senão se numero < 0
+				então escreva numero," é negativo.";
+				senão se numero == 0
+					escreva numero," é nulo.";			
+	
+	fim_para;
+
+fim.
+
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+    setlocale(LC_ALL, "Portuguese");
+
+    float numero;
+    int i, n_numero;
+
+	printf("Quantos números deseja analisar? ");
+	scanf(" %d", &n_numero);
+
+
+		for(i = 1; i <= n_numero; i++){
+
+            printf("--------------------------");
+            printf("\n\n       Analise nº %d\n\n", i);
+       	 	printf("--------------------------\n\n");
+
+			printf("Informe o %dº número: ", i);
+			scanf(" %f", &numero);
+
+
+				if(numero > 0){
+					printf("%1.0f, é positivo.\n\n", numero);
+				}else if(numero < 0){
+					printf("%1.0f, é negativo.\n\n", numero);
+					}else if(numero == 0){
+						printf("%1.0f, é nulo.\n\n", numero);
+						}else
+                            				printf("%1.0f, é inválido.\n\n", numero);
+
+
+		}
+
+
+
+
+}

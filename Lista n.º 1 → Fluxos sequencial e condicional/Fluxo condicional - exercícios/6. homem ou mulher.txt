@@ -1,0 +1,69 @@
+Algoritimo homem_mulher
+
+inicio
+	var 
+	literal nome[50], sexo;
+	inteiro: i, h = 0, m = 0; // TOTAIS + INCREMETO
+
+	para i de 1 até 30 faça
+		escreva "Pessoa nº",i;
+		escreva "Informe o nome: "; leia nome;
+		escreva "Informe o sexo (M, masculino; F, feminino): "; leia sexo;
+
+		se sexo == 'f' .ou. 'F'
+			então escreva nome," é mulher.";
+			m++;
+		senão se sexo == 'm' .ou. 'M'
+			então escreva nome," é homem.";
+			h++;
+	
+	fim_para;
+
+		escreva "o total é de ",m," mulheres";
+		escreva "o total é de ",h," homens";
+
+fim.
+
+EM C
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+    setlocale(LC_ALL, "Portuguese");
+
+	char nome[50], sexo;
+	int i, m = 0, h = 0; // TOTAIS + INCREMETO
+
+	for(i = 1; i <= 2; i++){
+        printf("--------------------------");
+		printf("\n\n       Pessoa nº %d\n\n", i);
+        printf("--------------------------\n\n");
+
+		printf("Informe o nome: ");
+		gets(nome);
+
+		printf("Informe o sexo 'M' para masculino ou 'F' para feminino: ");
+		scanf(" %c", &sexo);
+
+		if(sexo == 'f' || sexo == 'F'){
+			printf("\n%s é mulher.\n\n", nome);
+			m++;
+		}else if(sexo == 'm' || sexo == 'M'){
+			printf("\n%s é homem.\n\n", nome);
+			h++;
+		}else
+            printf("Sexo inválido! Digite 'M' para masculino ou 'F' para feminino. \n\n");
+
+        getchar() != '\n';
+
+	}
+
+	printf("O total é de %d mulheres.\n", m);
+	printf("O total é de %d homens.\n", h);
+
+}

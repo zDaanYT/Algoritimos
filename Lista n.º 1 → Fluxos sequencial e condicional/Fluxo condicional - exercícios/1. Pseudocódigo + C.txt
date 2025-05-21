@@ -1,0 +1,57 @@
++--------------+
+| PSEUDOCÓDIGO |
++--------------+
+
+ALGORÍTMO maior
+
+INÍCIO
+
+	VAR INTEIRO: v1, v2; //valores
+	
+	ESCREVA "Informe o 1º valor inteiro: "; LEIA v1;
+	ESCREVA "Informe o 2º valor inteiro: "; LEIA v2;
+
+	SE v1 > v2
+		ENTÃO ESCREVA v1;
+		SENÃO SE v1 < v2
+			ENTÃO ESCREVA v2;
+			SENÃO ESCREVA "Os valores são iguais!";
+
+FIM.
+
+
+
++-------------+
+| LINGUAGEM C |
++-------------+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	setlocale(LC_ALL, "Portuguese");
+	int v1, v2;
+
+	// ENTRADA
+
+	printf("Informe o 1 valor inteiro: ");
+	scanf("%d", &v1);
+
+	printf("Informe o 2 valor inteiro: ");
+	scanf("%d", &v2);
+
+	// PROCESSAMENTO + SAIDA
+
+	if(v1 > v2){
+		printf("%d",v1);
+		}else if(v1 < v2){
+				printf("%d",v2);
+				}else
+					printf("Os valores são iguais!");
+
+}
+
+

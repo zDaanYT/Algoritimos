@@ -1,0 +1,38 @@
+Algoritimo loja
+
+inicio
+	var 
+	real: v_compra;
+	
+	escreva "Informe o valor de compra: R$ "; leia v_compra;
+	
+	escreva "O valor das parcelas é de R$: ",v_compra / 5";
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+
+main(){
+
+    float v_compra, v_parcelado; // VALORES
+
+    setlocale(LC_ALL,"Portuguese");
+
+    // ENTRADA
+
+    printf("Informe o valor do produto: R$ ");
+    scanf("%f", &v_compra);
+
+    // PROCESSAMENTO
+
+    v_parcelado = v_compra / 5;
+
+    // SAIDA
+
+    printf("O valor das parcelas é de R$: %1.2f", v_parcelado);
+    getch();
+
+}

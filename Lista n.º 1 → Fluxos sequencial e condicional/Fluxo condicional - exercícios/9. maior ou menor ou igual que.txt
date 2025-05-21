@@ -1,0 +1,64 @@
+Algoritimo venda_condicional
+
+inicio
+	var 
+	real: numero; // PREÇOS E SOMAS
+
+		escreva "Informe um numero: "; leia numero;
+
+		se numero > 80
+			então escreva "O número ",numero," é maior que 80!";
+			senão escreva "O número ",numero," não é maior que 80.";
+
+		se numero < 25
+			então escreva "O número ",numero," é menor que 25!";
+			senão escreva "O número ",numero," não é menor que 25.";
+
+		se numero == 40
+			então escreva "O número ",numero," é igual a 40!";
+			senão escreva "O número ",numero," é não é igual a 40.";
+			
+
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+    setlocale(LC_ALL, "Portuguese");
+
+	float numero;
+
+	printf("Informe um número: ");
+    scanf(" %f", &numero);
+
+
+    printf("\n--------------------------");
+    printf("\n\n       Resultados \n\n");
+    printf("--------------------------\n\n");
+
+	if(numero > 80){
+        printf("O número é maior que 80!\n");
+
+	}else
+        printf("O número é menor que 80.\n");
+
+
+	if(numero < 25){
+        printf("O número é menor que 25!\n");
+
+	}else
+        printf("O número maior que 25.\n");
+
+	if(numero == 40){
+        printf("O número é igual a 40!\n");
+
+	}else
+        printf("O número é diferente de 40.\n");
+
+}

@@ -1,0 +1,46 @@
+Algoritimo juros
+
+inicio
+	var 
+	real: capital, v_final, tempo;
+	
+	escreva "Digite o seu Capital: "; leia capital;
+	escreva "Digite o tempo de aplicação: "; leia tempo;
+	
+	v_final = capital + (capital * 0.007 * tempo);
+	
+	escreva "O valor ajustado após %1.2f é de R$: %1.2f.", tempo, v_final;
+fim.
+
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float capital, v_final, tempo;
+	
+	setlocale(LC_ALL,"Portuguese");
+	
+	// ENTRADA
+	
+	printf("Digite o seu capital R$: ");
+	scanf("%f", &capital);
+
+	printf("Digite o tempo de aplicação (ex.: 0.5 para meio mês): ");
+	scanf("%f", &tempo);
+
+	// PROCESSAMENTO
+	
+	v_final = capital + capital * 0.007 * tempo;
+
+	// SAIDA
+
+	printf("O valor ajustado após %1.2f é de R$: %1.2f.", tempo, v_final);
+	getch();
+
+}

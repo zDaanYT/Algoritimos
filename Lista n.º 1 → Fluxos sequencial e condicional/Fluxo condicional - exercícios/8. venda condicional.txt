@@ -1,0 +1,75 @@
+Algoritimo venda_condicional
+
+INÍCIO
+	VAR 
+	REAL: p_custo, p_venda, soma_custos, soma_vendas; // PREÇOS E SOMAS
+	INTEIRO: i;
+	
+	soma_custos = 0;
+	soma_vendas = 0;
+	i = 0;
+
+	PARA i DE 1 ATÉ 40 FAÇA
+		ESCREVA "Produto nº",i;
+		ESCREVA "Informe o preço de custo: R$ "; LEIA p_custo;
+		ESCREVA "Informe o preço de venda: R$ "; LEIA p_venda;
+	
+		soma_custos = soma_custos + p_custo;
+		soma_vendas = soma_vendas + p_venda;		
+
+		se p_venda > p_custo
+			ENTÃO ESCREVA "O estabelecimento teve lucro!";
+			SENÃO p_venda < p_custo
+				ENTÃO ESCREVA "O estabelecimento teve prejuízo!";
+				SENÃO
+					ESCREVA "O estabelecimento não teve lucro e nem prejuízo.";			
+	
+	FIM_PARA;
+
+		escreva "A media dos preços de custos é de R$ ", soma_custos / 40;
+		escreva "A media dos preços de vendas é de R$ ", soma_vendas / 40;
+
+FIM.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+    setlocale(LC_ALL, "Portuguese");
+
+	float p_custo, p_venda, soma_custos = 0, soma_vendas = 0;
+	int i; // TOTAIS + INCREMETO
+
+	for(i = 1; i <= 2; i++){
+        printf("--------------------------");
+		printf("\n\n       Produto nº %d\n\n", i);
+        printf("--------------------------\n\n");
+	    printf("\nInforme o preço de custo: R$ ");
+        scanf(" %f", &p_custo);
+
+        printf("Informe o preço de venda: R$ ");
+        scanf(" %f", &p_venda);
+
+		soma_custos = soma_custos + p_custo;
+		soma_vendas = soma_vendas + p_venda;
+
+		if(p_venda > p_custo){
+            printf("\nO estabelecimento teve lucro!\n\n");
+		}else if(p_venda < p_custo){
+            printf("\nO estabelecimento teve prejuízo!\n\n");
+        		}else
+            printf("\nO estabelecimento não teve lucro e nem prejuízo.\n\n");
+	}
+
+    printf("--------------------------");
+    printf("\n\n       Resultados \n\n", i);
+    printf("--------------------------\n\n");
+	printf("A media dos preços de custos é de R$ %1.2f\n", soma_custos / 40);
+	printf("A media dos preços de vendas é de R$ %1.2f\n", soma_vendas / 40);
+
+}

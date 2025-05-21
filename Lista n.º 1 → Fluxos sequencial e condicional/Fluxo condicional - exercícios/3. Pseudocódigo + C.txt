@@ -1,0 +1,74 @@
++--------------+
+| PSEUDOCÓDIGO |
++--------------+
+
+ALGORÍTMO notas
+
+INÍCIO
+
+	VAR REAL: n1, n2, n3, media; //notas
+	LITERAL: nome[50];
+	
+	ESCREVA "Informe o seu nome: "; LEIA nome;
+	ESCREVA "Informe a nota 1: "; LEIA n1;
+	ESCREVA "Informe a nota 2: "; LEIA n2;
+	ESCREVA "Informe a nota 3: "; LEIA n3;
+
+	media = n1 + n2 + n3 / 3;
+
+	SE media >= 7.0
+			ENTÃO ESCREVA "O(A) aluno(a) ",nome," está aprovado(a)!";
+			SENÃO SE media <= 5.0
+					ENTÃO ESCREVA "O(A) aluno(a) ",nome," está reprovado(a)!";
+					SENÃO SE media >= 5.1 .E. media <= 6.9
+							ENTÃO ESCREVA "O(A) aluno(a) ",nome," está de exame!";
+
+
+FIM.
+
+
+
++-------------+
+| LINGUAGEM C |
++-------------+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	setlocale(LC_ALL,"Portuguese");
+
+	float n1, n2, n3, media;
+	char nome[50];
+
+	// ENTRADA
+
+	printf("Informe o seu nome: ");
+	gets(nome);
+
+	printf("Informe a nota 1: ");
+	scanf("%f", &n1);
+
+	printf("Informe a nota 2: ");
+	scanf("%f", &n2);
+
+	printf("Informe a nota 3: ");
+	scanf("%f", &n3);
+
+    	// PROCESSAMENTO + SAIDA
+
+   	 media = (n1 + n2 + n3) / 3;
+	
+    	if(media >= 7.0)
+       		printf("O(A) aluno(a) %s com a média %1.1f, está aprovado(a)!", nome, media);
+
+    	if(media <= 5.0)
+        	printf("O(A) aluno(a) %s com a média %1.1f, está reprovado(a)!", nome, media);
+
+   	if(media <= 5.1 && media <= 6.9)
+        	printf("O(A) aluno(a) %s com a média %1.1f, está reprovado(a)!\n", nome, media);
+
+}

@@ -1,0 +1,47 @@
++--------------+
+| PSEUDOCÓDIGO |
++--------------+
+
+ALGORÍTMO intervalos
+
+INÍCIO
+
+	VAR REAL: v1; //valores
+	
+	ESCREVA "Informe um valor: "; LEIA v1;
+
+	SE v1 > 100 .E. v1 < 200
+			ENTÃO ESCREVA "O valor ",v1," está no intervalo entre 100 e 200.";
+			SENÃO ESCREVA "O valor ",v1," está fora do intervalo entre 100 e 200.";
+
+FIM.
+
+
+
++-------------+
+| LINGUAGEM C |
++-------------+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	setlocale(LC_ALL,"Portuguese");
+	float v1;
+
+	// ENTRADA
+
+	printf("Informe um valor: ");
+	scanf("%f", &v1);
+
+   	// PROCESSAMENTO + SAIDA
+
+	if(v1 > 100 && v1 < 200){
+		printf("O valor %1.1f está no intervalo entre 100 e 200.\n", v1);
+		}else
+			printf("O valor %1.1f está fora do intervalo entre 100 e 200.\n", v1);
+
+}

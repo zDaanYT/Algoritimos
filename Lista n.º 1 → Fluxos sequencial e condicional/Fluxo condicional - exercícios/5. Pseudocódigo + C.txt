@@ -1,0 +1,52 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTIMO maior_idade
+
+INÍCIO
+	VAR INTEIRO: idade, i;
+
+	PARA i DE 1 ATÉ 50 FAÇA
+		ESCREVA "Informe a ",i,"ª idade"; LEIA idade;
+
+		SE idade >= 18
+		ENTÃO 
+			ESCREVA "A pessoa n.º",i," é maior de idade!";
+		SENÃO
+			ESCREVA "A pessoa n.º",i," é menor de idade!";
+	
+	FIM_PARA;
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main() {
+    int i, idade;
+
+    setlocale(LC_ALL, "Portuguese");
+
+    // ENTRADA + PROCESSAMENTO + SAIDA
+
+    for(i = 1; i <= 5; i++) {
+        printf("Informe a %dª idade: ", i);
+        scanf("%d", &idade);
+
+	if(idade >= 18){
+		printf("A pessoa n.º %d é maior de idade!\n\n", i);
+
+	}else
+		printf("A pessoa n.º %d é menor de idade!\n\n", i);
+
+    }
+
+    getch();
+}

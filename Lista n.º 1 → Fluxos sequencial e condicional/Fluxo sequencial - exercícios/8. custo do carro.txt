@@ -1,0 +1,43 @@
+Algoritimo custo_carro
+
+inicio
+	var 
+	real: custo_fabrica, custo_com_impostos, custo_final;
+	
+	escreva "Informe o custo de fabrica do veículo: "; leia custo_fabrica;
+
+	custo_com_impostos = custo_fabrica * 1.45;
+	custo_final = custo_com_impostos * 1.3;
+	
+	escreva "O custo do carro ajustado é de R$ ",custo_final;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float custo_fabrica, custo_com_impostos, custo_final;
+
+	setlocale(LC_ALL,"Portuguese");
+
+	// ENTRADA
+
+	printf("Informe o custo de fabrica do veículo R$: ");
+	scanf("%f", &custo_fabrica);
+
+	// PROCESSAMENTO
+
+	custo_com_impostos = custo_fabrica * 1.45;
+	custo_final = custo_com_impostos * 1.3;
+
+	// SAIDA
+
+	printf("O custo do carro ajustado é de R$: %1.2f",custo_final);
+
+}
+

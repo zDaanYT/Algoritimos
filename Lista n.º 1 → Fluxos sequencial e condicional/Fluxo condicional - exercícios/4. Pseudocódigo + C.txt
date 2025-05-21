@@ -1,0 +1,112 @@
++--------------+
+| PSEUDOCÓDIGO |
++--------------+
+
+ALGORÍTMO contagem
+
+INÍCIO
+
+	VAR REAL: n;
+	INTEIRO: quantidade, i;
+	
+	quantidade = 0;
+	i = 0;
+
+	PARA i DE 1 ATÉ 80 FAÇA
+	
+		ESCREVA "Informe o ",i,"º número"; LEIA n;
+
+		SE n >= 10 .E. n <= 150
+			ENTÃO quantidade = quantidade + 1;
+
+	FIM_PARA.			
+
+	ESCREVA "Foram informados ",quantidade," números entre 10 e 150.";
+
+FIM.
+
+
+
+ALGORÍTMO contagem (enquanto → faça)
+
+INÍCIO
+
+	VAR REAL: n;
+	INTEIRO: quantidade, i;
+	
+	quantidade = 0;
+	i = 0;
+
+	ENQUANTO i >= 80 FAÇA
+	
+		ESCREVA "Informe o ",i,"º número"; LEIA n;
+
+		SE n >= 10 .E. n <= 150
+			ENTÃO quantidade = quantidade + 1;
+			i = i + 1;
+
+	FIM_ENQUANTO.			
+
+	ESCREVA "Foram informados ",quantidade," números entre 10 e 150.";
+
+FIM.
+
+
+
+ALGORÍTMO contagem (faça → enquanto)
+
+
+INÍCIO
+
+	VAR REAL: n;
+	INTEIRO: quantidade, i;
+	
+	quantidade = 0;
+	i = 1;
+
+	FAÇA
+	
+		ESCREVA "Informe o ",i,"º número"; LEIA n;
+
+		SE n >= 10 .E. n <= 150
+			ENTÃO quantidade = quantidade + 1;
+			i = i + 1;
+
+	ENQUANTO i >= 80			
+
+	ESCREVA "Foram informados ",quantidade," números entre 10 e 150.";
+
+FIM.
+
+
+
++------------------------+
+| LINGUAGEM C APENAS FOR |
++------------------------+
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main() {
+
+	setlocale(LC_ALL, "Portuguese");
+	float n;
+    	int i, quantidade = 0;
+
+    	// ENTRADA + PROCESSAMENTO
+
+   	for(i = 1; i <= 80; i++) {
+        	printf("Informe o %2dº número: ", i);
+        	scanf("%d", &n);
+
+        if(n >= 10 && n <= 150)
+            quantidade++;  // INCREMENTO
+    }
+
+    // SAIDA
+
+    printf("Foram informados %d números entre 10 e 150.\n", quantidade);
+    getch();
+}

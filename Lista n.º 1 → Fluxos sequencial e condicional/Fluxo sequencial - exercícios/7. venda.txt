@@ -1,0 +1,45 @@
+Algoritimo venda
+
+inicio
+	var 
+	real: custo, acrescimo, v_final;
+	
+	escreva "Informe o preço de custo: R$ "; leia custo;
+	escreva "Informe o acréscimo. (Ex.: 0.45 para 45%). R$:"; leia acrescimo;
+
+	v_final = custo * acrecimo + custo; 
+	
+	escreva "O valor de venda é de R$: ",v_final;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+
+	float custo, acrescimo, v_final;
+
+	setlocale(LC_ALL,"Portuguese");
+	
+	// ENTRADA
+	
+	printf("Informe o preço de custo R$: ");
+	scanf("%f", &custo);
+
+	printf("Informe o acréscimo. (Ex.: 0.45 para 45%). R$: ");
+	scanf("%f", &acrescimo);
+
+	// PROCESSAMENTO
+	
+	v_final = custo * acrecimo + custo;
+
+	// SAIDA
+
+	printf("O valor de venda é de R$: %1.2f", v_final);
+	getch();
+
+}

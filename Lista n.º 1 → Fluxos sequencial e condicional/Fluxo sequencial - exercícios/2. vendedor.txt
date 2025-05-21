@@ -1,0 +1,50 @@
+Algoritimo vendedor
+
+inicio
+	var 
+	real: sal_fixo, sal_final, vendas;
+	literal: nome[50];
+	
+	escreva "Qual é o nome do vendedor?"; leia nome;
+	escreva "Infome o salário fixo?"; leia sal_fixo;
+	escreva "Qual foi o total de vendas do mês?"; leia vendas;
+
+	sal_final =  sal_fixo + vendas * 0.12;
+	
+	escreva "O vendedor %c com salário de %1.2f ganhou nesse mês %1.2f",nome, sal_fixo, sal_final;
+fim.
+
+EM C
+
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <string.h>
+
+main(){
+    float sal_fixo, sal_final, vendas; // SALÁRIO
+    char nome[50];
+
+    setlocale(LC_ALL,"Portuguese");
+
+    // ENTRADA
+
+    printf("Qual é o seu nome? ");
+    gets(nome);
+
+    printf("Qual é o seu salário fixo? R$: ");
+    scanf("%f", &sal_fixo);
+
+    printf("Infome o total de vendas do mês? R$: ");
+    scanf("%f", &vendas);
+
+    // PROCESSAMENTO
+
+    sal_final = sal_fixo + vendas * 0.12;
+
+    // SAIDA
+
+    printf("O vendedor %c com salário de %1.2f ganhou nesse mês %1.2f",nome, sal_fixo, sal_final);
+    getch();
+
+}
