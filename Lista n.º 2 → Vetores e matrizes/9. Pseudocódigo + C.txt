@@ -39,42 +39,38 @@ FIM.
 
 #include <stdio.h>
 #include <locale.h>
-#define L 2
-#define C 2
+#define TAM 2 //MATRIZ OBRIGATÓRIAMENTE QUADRADA EX.: 2x2, 3x3...
 
 main(){
 	int i, j;
-	float A[L][C], B[L][C];
+	float A[TAM][TAM], B[TAM][TAM];
 
-	for(i = 0; i < L; i++){
-			for(j = 0; j < L; j++){
+	for(i = 0; i < TAM; i++){
+			for(j = 0; j < TAM; j++){
 
 			printf("Informe A[%d][%d] = ", i + 1, j + 1);
 			scanf("%f", &A[i][j]);
 
 			}
-
 	}
 
 
-	for(i = 0; i < L; i++){
-			for(j = 0; j < L; j++){
+	for(i = 0; i < TAM; i++){
+			for(j = 0; j < TAM; j++){
 
 				B[i][j] = A[i][j] / A[i][i];
 
 			}
-
 	}
 
 
-	for(i = 0; i < L; i++){
+	for(i = 0; i < TAM; i++){
             printf("\n");
-			for(j = 0; j < L; j++){
+			for(j = 0; j < TAM; j++){
 
-				printf(" %f ", B[i][j]);
+				printf(" %.2f ", B[i][j]);
 
 			}
-
 	}
 
 
