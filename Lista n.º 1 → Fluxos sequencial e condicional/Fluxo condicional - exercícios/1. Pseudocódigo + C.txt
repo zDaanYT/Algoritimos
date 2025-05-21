@@ -41,6 +41,7 @@ main(){
 
 	printf("Informe o 1 valor inteiro: ");
 	scanf("%d", &v1);
+
 	printf("Informe o 2 valor inteiro: ");
 	scanf("%d", &v2);
 
