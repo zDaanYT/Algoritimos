@@ -15,7 +15,8 @@ INÍCIO
 	PARA i DE 1 ATÉ 80 FAÇA
 		ESCREVA "Informe o ",i,"º número"; LEIA n;
 		SE n >= 10 .E. n <= 150
-			ENTÃO quantidade = quantidade + 1;
+			ENTÃO 
+				quantidade = quantidade + 1;
 	FIM_PARA.			
 
 	ESCREVA "Foram informados ",quantidade," números entre 10 e 150.";
@@ -37,8 +38,9 @@ INÍCIO
 	ENQUANTO i >= 80 FAÇA
 		ESCREVA "Informe o ",i,"º número"; LEIA n;
 		SE n >= 10 .E. n <= 150
-			ENTÃO quantidade = quantidade + 1;
-			i = i + 1;
+			ENTÃO 
+				quantidade = quantidade + 1;
+				i = i + 1;
 
 	FIM_ENQUANTO.			
 
@@ -61,8 +63,9 @@ INÍCIO
 	FAÇA
 		ESCREVA "Informe o ",i,"º número"; LEIA n;
 		SE n >= 10 .E. n <= 150
-			ENTÃO quantidade = quantidade + 1;
-			i = i + 1;
+			ENTÃO 
+				quantidade = quantidade + 1;
+				i = i + 1;
 	ENQUANTO i >= 80			
 
 	ESCREVA "Foram informados ",quantidade," números entre 10 e 150.";
