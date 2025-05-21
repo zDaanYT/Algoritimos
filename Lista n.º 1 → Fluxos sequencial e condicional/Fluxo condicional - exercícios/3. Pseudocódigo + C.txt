@@ -6,7 +6,7 @@ ALGORÍTMO notas
 
 INÍCIO
 
-	VAR REAL: n1, n2, n3, media; //notas
+	VAR REAL: n1, n2, n3, media; // NOTAS
 	LITERAL: nome[50];
 	
 	ESCREVA "Informe o seu nome: "; LEIA nome;
