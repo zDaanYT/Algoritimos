@@ -1,0 +1,69 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORITIMO troca
+
+INÍCIO
+	VAR INTEIRO: A[20], B[20], aux, i;
+	
+	// LEITURAS de A e B
+
+	PARA i DE 1 ATÉ 20 FAÇA 
+	  	ESCREVA "Informe A[",i,"]"; LEIA A[i];
+	  	ESCREVA "Informe B[",i,"]"; LEIA B[i];
+	FIM_PARA;
+	
+	PARA i DE 1 ATÉ 20 FAÇA
+		aux = A[i];
+	  	A[i] = B[i];
+	  	B[i] = aux;
+
+	  	ESCREVA "A[",i,"] é ",A[i]," e B[",i,"] é ",B[i]";
+
+	FIM_PARA;
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#define TAM 2
+
+main(){
+    setlocale(LC_ALL, "portuguese");
+
+    int i, A[TAM], B[TAM], aux;
+
+    for(i = 0; i < TAM; i++){
+        printf("\n--------------------\n\n");
+        printf("        A[%d]", i + 1);
+        printf("\n\n--------------------\n");
+
+        printf("\nInforme o número: ");
+        scanf("%d", &A[i]);
+
+        printf("\n--------------------\n\n");
+        printf("        B[%d]", i + 1);
+        printf("\n\n--------------------\n");
+
+        printf("\nInforme o número: ");
+        scanf("%d", &B[i]);
+
+    }
+
+    for(i = 0; i < TAM; i++){
+		aux = A[i];
+	  	A[i] = B[i];
+	  	B[i] = aux;
+
+	printf("\n");
+        printf(" A[%d] é %d e B[%d] é %d",i + 1, A[i], i + 1, B[i]);
+        printf("\n");
+
+    }
+}
+

@@ -1,0 +1,67 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+ 
+ALGORÍTIMO faturamento
+
+INÍCIO
+	VAR INTEIRO: i, Q[100];
+	REAL: faturamento, P[100];
+
+	faturamento = 0;
+	
+	PARA i DE 1 ATÉ 100 FAÇA
+
+		ESCREVA "Informe Q[",i,"]: "; LEIA Q[i]; // QUANTIDADE DE PRODUTOS
+		ESCREVA "Informe P[",i,"]: "; LEIA P[i]; // PREÇO DOS PRODUTOS
+
+		// SOMATÓRIO faturamento = faturamento + (quantidade[i] * preço[i])
+
+		faturamento += (Q[i] * P[i]);
+
+	FIM_PARA;
+	
+	ESCREVA "O faturamento total é de R$: ", faturamento;
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#define TAM 2
+
+main(){
+    setlocale(LC_ALL, "portuguese");
+
+    int i, Q[TAM];
+    float faturamento = 0, P[TAM];
+
+    for(i = 0; i < TAM; i++){
+        printf("\n+-------------------+\n");
+        printf("|   Produto nº %d    |\n", i + 1);
+        printf("+-------------------+\n");
+
+        printf("\nInforme a quantidade: ");
+        scanf("%d", &Q[i]);
+
+        printf("Informe o preço R$: ");
+        scanf("%f", &P[i]);
+
+        faturamento += (Q[i] * P[i]);
+
+    }
+
+    if(faturamento > 0){
+        printf("\nO faturamento total é de R$: %1.2f\n", faturamento);
+    }else
+        printf("\nVocê é pobre!\n");
+
+}
+
+	
+	
+	
+		

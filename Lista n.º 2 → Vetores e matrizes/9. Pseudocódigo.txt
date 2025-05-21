@@ -1,0 +1,81 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+ 
+ALGORÍTIMO matriz20x20
+
+INÍCIO
+	VAR
+	INTEIRO i, j;
+	REAL A[20][20], B[20][20];	
+
+	// MATRIZ A
+	
+	PARA i DE 1 ATÉ 20
+		PARA j DE 1 ATÉ 20
+			ESCREVA "Informe A[",i,"][",j,"] = "; LEIA A[i][j]; 
+		FIM_PARA;
+	FIM_PARA;
+
+	//Aij / Diagonal principal
+
+	PARA i DE 1 ATÉ 20
+			PARA j DE 1 ATÉ 20
+				B[i][j] = A[i][j] / A[i][i];
+			FIM_PARA;
+	FIM_PARA;
+
+	PARA i DE 1 ATÉ 20
+			PARA j DE 1 ATÉ 20
+				ESCREVA " ", B[i][j];
+			FIM_PARA;
+	FIM_PARA;		
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#define L 2
+#define C 2
+
+main(){
+	int i, j;
+	float A[L][C], B[L][C];
+
+	for(i = 0; i < L; i++){
+			for(j = 0; j < L; j++){
+
+			printf("Informe A[%d][%d] = ", i + 1, j + 1);
+			scanf("%f", &A[i][j]);
+
+			}
+
+	}
+
+
+	for(i = 0; i < L; i++){
+			for(j = 0; j < L; j++){
+
+				B[i][j] = A[i][j] / A[i][i];
+
+			}
+
+	}
+
+
+	for(i = 0; i < L; i++){
+            printf("\n");
+			for(j = 0; j < L; j++){
+
+				printf(" %f ", B[i][j]);
+
+			}
+
+	}
+
+
+}

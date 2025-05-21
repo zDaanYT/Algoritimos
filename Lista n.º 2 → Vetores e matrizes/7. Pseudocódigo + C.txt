@@ -1,0 +1,72 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+ 
+ALGORÍTIMO soma_linha
+
+INÍCIO
+	VAR
+	INTEIRO i, j, M[4][5], SOMALINHA[4], total;
+	
+	total = 0;	
+
+	PARA i de 0 até 3
+		PARA j de 0 até 4	
+			ESCREVA "Informe M[",i + 1,"][",j + 1,"] = "; LEIA M[i][j]; 
+		FIM_PARA;
+	FIM_PARA;
+
+	//SOMA LINHAS
+
+	PARA i de 0 até 3
+		SOMALINHA[i] = 0; 
+			PARA j de 0 até 4
+				SOMALINHA[i] = SOMALINHA[i] + M[i][j];
+			FIM_PARA;
+		total = total + SOMALINHA[i];
+	FIM_PARA;	
+
+	ESCREVA "A soma das linhas é igual a: ", total;
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#define L 2
+#define C 2
+
+main(){
+	int i, j, M[L][C], SOMALINHA[L], total = 0;
+	setlocale(LC_ALL, "Portuguese");
+
+	for(i = 0; i <= L - 1; i++){
+		for(j = 0; j <= C - 1; j++){
+			printf("Informe M[%d][%d] = ", i + 1, j + 1 );
+			scanf("%d", &M[i][j]);
+		}
+	}
+
+	for(i = 0; i <= L - 1 ; i++){
+		SOMALINHA[i] = 0;
+
+		for(j = 0; j <= C - 1 ; j++){
+			SOMALINHA[i] = SOMALINHA[i] + M[i][j];
+		}
+
+		total = total + SOMALINHA[i];
+	}
+
+   	printf("\n--------------------------------------\n");
+	printf(" A soma das linhas é igual a: %d", total);
+	printf("\n--------------------------------------\n");
+
+}
+
+
+	
+	
+	
+		
