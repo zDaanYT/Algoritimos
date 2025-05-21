@@ -40,10 +40,8 @@ main() {
 
 	if(idade >= 18){
 		printf("A pessoa n.º %d é maior de idade!\n\n", i);
-
 	}else
 		printf("A pessoa n.º %d é menor de idade!\n\n", i);
-
     }
 
     getch();
