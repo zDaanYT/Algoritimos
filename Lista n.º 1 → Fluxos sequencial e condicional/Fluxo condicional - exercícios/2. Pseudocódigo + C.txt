@@ -11,8 +11,10 @@ INÍCIO
 	ESCREVA "Informe um valor: "; LEIA v1;
 
 	SE v1 > 100 .E. v1 < 200
-			ENTÃO ESCREVA "O valor ",v1," está no intervalo entre 100 e 200.";
-			SENÃO ESCREVA "O valor ",v1," está fora do intervalo entre 100 e 200.";
+			ENTÃO 
+				ESCREVA "O valor ",v1," está no intervalo entre 100 e 200.";
+			SENÃO 
+				ESCREVA "O valor ",v1," está fora do intervalo entre 100 e 200.";
 
 FIM.
 
