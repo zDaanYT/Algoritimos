@@ -41,7 +41,6 @@ main(){
 
 	printf("Informe o 1 valor inteiro: ");
 	scanf("%d", &v1);
-
 	printf("Informe o 2 valor inteiro: ");
 	scanf("%d", &v2);
 
@@ -49,10 +48,11 @@ main(){
 
 	if(v1 > v2){
 		printf("%d",v1);
-	}else if(v1 < v2){
-				printf("%d",v2);
-			}else
-				printf("Os valores são iguais!");
+	}else
+		if(v1 < v2){
+			printf("%d",v2);
+		}else
+			printf("Os valores são iguais!");
 
 }
 
