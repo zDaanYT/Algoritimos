@@ -6,7 +6,7 @@ ALGORÍTMO intervalos
 
 INÍCIO
 
-	VAR REAL: v1; //valores
+	VAR REAL: v1; // VALORES
 	
 	ESCREVA "Informe um valor: "; LEIA v1;
 
