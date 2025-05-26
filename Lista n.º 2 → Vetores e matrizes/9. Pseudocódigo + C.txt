@@ -11,22 +11,22 @@ INÍCIO
 
 	// MATRIZ A
 	
-	PARA i DE 1 ATÉ 20
-		PARA j DE 1 ATÉ 20
+	PARA i DE 1 ATÉ 20 FAÇA
+		PARA j DE 1 ATÉ 20 FAÇA
 			ESCREVA "Informe A[",i,"][",j,"] = "; LEIA A[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
 	//Aij / Diagonal principal
 
-	PARA i DE 1 ATÉ 20
-		PARA j DE 1 ATÉ 20
+	PARA i DE 1 ATÉ 20 FAÇA
+		PARA j DE 1 ATÉ 20 FAÇA
 			B[i][j] = A[i][j] / A[i][i];
 		FIM_PARA;
 	FIM_PARA;
 
-	PARA i DE 1 ATÉ 20
-		PARA j DE 1 ATÉ 20
+	PARA i DE 1 ATÉ 20 FAÇA
+		PARA j DE 1 ATÉ 20 FAÇA
 			ESCREVA " ", B[i][j];
 		FIM_PARA;
 	FIM_PARA;		
