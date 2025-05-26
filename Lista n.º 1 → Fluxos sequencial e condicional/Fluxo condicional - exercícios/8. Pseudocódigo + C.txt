@@ -54,7 +54,7 @@ main(){
 
 	for(i = 1; i <= 2; i++){
         	printf("--------------------------");
-		printf("\n\n       Produto nº %d\n\n", i);
+		printf("\n\n       Produto n. º %d\n\n", i);
        		printf("--------------------------\n\n");
 
 	    	printf("\nInforme o preço de custo: R$ ");
