@@ -11,27 +11,27 @@ INÍCIO
 
 	// MATRIZ A
 	
-	PARA i de 0 até 2
-		PARA j de 0 até 4	
+	PARA i DE 1 ATÉ 3
+		PARA j de 1 até 5	
 			ESCREVA "Informe A[",i + 1,"][",j + 1,"] = "; LEIA A[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
 	// MATRIZ B
 
-	PARA i de 0 até 2
-		PARA j de 0 até 4	
+	PARA i DE 1 ATÉ 3
+		PARA j DE 1 ATÉ 5	
 			ESCREVA "Informe B[",i + 1,"][",j + 1,"] = "; LEIA B[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
 	//SOMA A + B = C
 
-	PARA i de 0 até 2
-			PARA j de 0 até 4
-				C[i][j] = A[i][j] + B[i][j];
-				ESCREVA C[i][j], " ";
-			FIM_PARA;
+	PARA i DE 1 ATÉ 3
+		PARA j DE 1 ATÉ 5
+			C[i][j] = A[i][j] + B[i][j];
+			ESCREVA C[i][j], " ";
+		FIM_PARA;
 			ESCREVA "\n";
 	FIM_PARA;	
 
