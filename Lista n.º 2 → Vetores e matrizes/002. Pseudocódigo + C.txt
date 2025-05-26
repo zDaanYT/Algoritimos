@@ -10,12 +10,12 @@ INÍCIO
 	// LEITURA de A
 
 	PARA i DE 1 ATÉ 30 FAÇA 
-	  	ESCREVA "Informe A[",i,"]"; LEIA A[i];
+	  	ESCREVA ("Informe A[",i,"]"); LEIA A[i];
 	FIM_PARA;
 
 	PARA i DE 1 ATÉ 30 FAÇA
 	 	B[i] = A[i] * 3;
-	  	ESCREVA "B[",i,"] = ", B[i];	  
+	  	ESCREVA ("B[",i,"] = ", B[i]);	  
 	FIM_PARA;
 
 FIM.
