@@ -10,17 +10,17 @@ INÍCIO
 	// LEITURA de A
 
 	PARA i DE 1 ATÉ 100 FAÇA 
-	  	ESCREVA "Informe A[",i,"]"; LEIA A[i];
+	  	ESCREVA ("Informe A[",i,"]"); LEIA A[i];
 	FIM_PARA;
 	
 	PARA i DE 1 ATÉ 100 FAÇA
 		SE A[i] % 2 == 0 
 		ENTÃO
 			B[i] = A[i] * 5;
-			ESCREVA "B[",i,"] é ", B[i];
+			ESCREVA ("B[",i,"] é ", B[i]);
 		SENÃO
 			B[i] = A[i] + 5;
-	  		ESCREVA "B[",i,"] é ", B[i];
+	  		ESCREVA ("B[",i,"] é ", B[i]);
 	FIM_PARA;
 FIM.
 
