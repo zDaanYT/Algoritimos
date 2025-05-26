@@ -5,26 +5,28 @@
 ALGORITIMO media_conjuntos
 
 INÍCIO
-	VAR INTEIRO: i;
+	VAR INTEIRO: i, n;
 	REAL: A[50], B[50], C[50];
-	
+
+	n = 50;
+
 	// LEITURAS de A e B
 
 	PARA i de 1 ATÉ 50 FAÇA
-	  	ESCREVA "Informe A[",i,"] = ";
+	  	ESCREVA ("Informe A[",i,"] = ");
 	  	LEIA A[i];
 	FIM_PARA;
 
 	PARA i de 1 ATÉ 50 FAÇA
-	  	ESCREVA "Informe B[",i,"] = ";
+	  	ESCREVA ("Informe B[",i,"] = ");
 	  	LEIA B[i];
 	FIM_PARA;
 
 	// SOMA A e B + MÉDIA
 
 	PARA i de 1 ATÉ 50 FAÇA
-	  	C[i] = (A[i] + B[i]) / TAM;
-	 	ESCREVA "C[",i,"] = ", C[i];
+	  	C[i] = (A[i] + B[i]) / n;
+	 	ESCREVA ("C[",i,"] = ", C[i]);
 	FIM_PARA;
 
 FIM.
