@@ -13,7 +13,7 @@ INÍCIO
 	
 	PARA i DE 1 ATÉ 20 FAÇA
 		PARA j DE 1 ATÉ 20 FAÇA
-			ESCREVA "Informe A[",i,"][",j,"] = "; LEIA A[i][j]; 
+			ESCREVA ("Informe A[",i,"][",j,"] : "); LEIA A[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
@@ -26,8 +26,9 @@ INÍCIO
 	FIM_PARA;
 
 	PARA i DE 1 ATÉ 20 FAÇA
+		ESCREVA ("\n");
 		PARA j DE 1 ATÉ 20 FAÇA
-			ESCREVA " ", B[i][j];
+			ESCREVA (" ", B[i][j]);
 		FIM_PARA;
 	FIM_PARA;		
 
