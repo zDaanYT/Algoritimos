@@ -20,15 +20,15 @@ INÍCIO
 	//Aij / Diagonal principal
 
 	PARA i DE 1 ATÉ 20
-			PARA j DE 1 ATÉ 20
-				B[i][j] = A[i][j] / A[i][i];
-			FIM_PARA;
+		PARA j DE 1 ATÉ 20
+			B[i][j] = A[i][j] / A[i][i];
+		FIM_PARA;
 	FIM_PARA;
 
 	PARA i DE 1 ATÉ 20
-			PARA j DE 1 ATÉ 20
-				ESCREVA " ", B[i][j];
-			FIM_PARA;
+		PARA j DE 1 ATÉ 20
+			ESCREVA " ", B[i][j];
+		FIM_PARA;
 	FIM_PARA;		
 
 FIM.
