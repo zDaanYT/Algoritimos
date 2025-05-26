@@ -17,6 +17,7 @@ INÍCIO
 	FIM_PARA;
 
 	PARA i DE 1 ATÉ n FAÇA
+		ESCREVA ("\n");
 		PARA j DE 1 ATÉ n FAÇA
 			SE i == j
 			ENTÃO
