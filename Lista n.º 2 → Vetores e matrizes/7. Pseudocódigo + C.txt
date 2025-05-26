@@ -10,17 +10,17 @@ INÍCIO
 	
 	total = 0;	
 
-	PARA i de 0 até 3
-		PARA j de 0 até 4	
+	PARA i DE 1 ATÉ 4 FAÇA
+		PARA j DE 1 ATÉ 5 FAÇA
 			ESCREVA "Informe M[",i + 1,"][",j + 1,"] = "; LEIA M[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
 	//SOMA LINHAS
 
-	PARA i de 0 até 3
+	PARA i DE 1 ATÉ 4 FAÇA
 		SOMALINHA[i] = 0; 
-			PARA j de 0 até 4
+			PARA j DE 1 ATÉ 5 FAÇA
 				SOMALINHA[i] = SOMALINHA[i] + M[i][j];
 			FIM_PARA;
 		total = total + SOMALINHA[i];
