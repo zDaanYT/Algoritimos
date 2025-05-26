@@ -1,0 +1,96 @@
++--------------+
+| PSEUDOCÓDIGO |
++--------------+
+
+ALGORÍTIMO serviço_militar
+
+INÍCIO
+	VAR 
+	LITERAL nome[50], sexo, saude;
+	INTEIRO i, aptidao, inaptidao, idade, n_pessoas; // TOTAIS + INCREMETO
+
+	aptidao = 0;
+	inaptidao = 0;
+
+	ESCREVA "Quantas pessoas deseja avaliar? "; LEIA n_pessoas;
+
+	PARA i DE 1 ATÉ n_pessoas FAÇA
+		ESCREVA "Pessoa n. º", i;
+		ESCREVA "Informe o nome: "; LEIA nome;
+ 		ESCREVA "Informe a idade: "; LEIA idade;
+		ESCREVA "Informe o sexo, 'M' para masculino ou 'F' para feminino: "; LEIA sexo;
+		ESCREVA "Informe o estado de saúde, 'S' para saudável ou 'N' para não saudável: "; LEIA saude;
+
+		
+		SE sexo == 'f' .OU. sexo == 'F'
+		ENTÃO 
+			ESCREVA nome," não é obrigada a servir.";
+			inaptidao++;
+		SENÃO 
+			SE (sexo == 'm' .OU. sexo == 'M') .E. (idade >= 18) .E. (saude == 's' .OU. saúde == 'S')
+			ENTÃO 
+				ESCREVA nome," é apto para servir.";
+				aptidao++;
+			SENÃO
+				ESCREVA nome," é inapto para servir.";
+				inaptidao++;			
+	
+	FIM_PARA;
+
+		ESCREVA "O total é de ",aptidao," aptos";
+		ESCREVA "O total é de ",inaptidao," inaptos";
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+    	setlocale(LC_ALL, "Portuguese");
+	char nome[50], sexo, saude;
+	int i, aptidao = 0, inaptidao = 0, idade, n_pessoas; // TOTAIS + INCREMETO
+
+	printf("Informe quantas pessoas deseja avaliar: ");
+	scanf("%d", &n_pessoas);
+
+	getchar() != '\n';
+
+	for(i = 1; i <= n_pessoas; i++){
+        	printf("--------------------------");
+		printf("\n\n       Pessoa n. º %d\n\n", i);
+        	printf("--------------------------\n\n");
+
+		printf("Informe o nome: ");
+		gets(nome);
+
+		printf("Informe a idade: ");
+		scanf(" %d", &idade);
+
+		printf("Informe o sexo, 'M' para masculino ou 'F' para feminino: ");
+		scanf(" %c", &sexo);
+
+		printf("Informe o estado de saúde, 'S' para saudável ou 'N' para não saudável: ");
+		scanf(" %c", &saude);		
+
+		if(sexo == 'f' || sexo == 'F'){
+			printf("\n%s, não é obrigada a servir.\n\n", nome);
+			inaptidao++;
+		}else 
+			if((sexo == 'm' || sexo == 'M') && idade >= 18 && (saude == 's' || saude == 'S')){
+				printf("\n%s, é apto para servir.\n\n", nome);
+				aptidao++;
+			}else {
+           			printf("\n%s, é inapto para servir.\n\n", nome);
+				inaptidao++;
+			}
+
+        	getchar() != '\n';
+	}
+
+	printf("O total é de %d aptos.\n", aptidao);
+	printf("O total é de %d inaptos.\n", inaptidao);
+}
