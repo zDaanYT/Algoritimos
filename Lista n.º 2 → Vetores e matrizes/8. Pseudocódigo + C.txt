@@ -43,8 +43,8 @@ FIM.
 
 #include <stdio.h>
 #include <locale.h>
-#define L 2
-#define C 2
+#define L 3
+#define C 5
 
 main(){
 	int i, j;
