@@ -1,0 +1,41 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+ 
+ALGORÍTIMO 
+
+INÍCIO
+	VAR REAL: M[n][n];
+	INTEIRO: i, j, n;
+
+	ESCREVA ("Informe o valor de n: "); LEIA n;	
+
+	PARA i DE 1 ATÉ n FAÇA
+		PARA j DE 1 ATÉ n FAÇA
+			ESCREVA ("Informe M[",i,"][",j,"]: "); LEIA M[i][j];
+		FIM_PARA;
+	FIM_PARA;
+
+	PARA i DE 1 ATÉ n FAÇA
+		PARA j DE 1 ATÉ n FAÇA
+			SE i == j
+			ENTÃO
+				ESCREVA (" ");
+			SENÃO
+				SE i != j 
+				ENTÃO
+					ESCREVA (" ", M[i][j]);
+				SENÃO	
+					ESCREVA ("ERRO!");
+		FIM_PARA;
+	FIM_PARA;	
+
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#define TAM 2 //MATRIZ OBRIGATÓRIAMENTE QUADRADA EX.: 2x2, 3x3...
