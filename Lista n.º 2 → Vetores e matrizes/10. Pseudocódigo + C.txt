@@ -19,15 +19,12 @@ INÍCIO
 	PARA i DE 1 ATÉ n FAÇA
 		ESCREVA ("\n");
 		PARA j DE 1 ATÉ n FAÇA
-			SE i == j
+			SE i != j
 			ENTÃO
-				ESCREVA (" ");
+				ESCREVA (" ", M[i][j]);
 			SENÃO
-				SE i != j 
-				ENTÃO
-					ESCREVA (" ", M[i][j]);
-				SENÃO	
-					ESCREVA ("ERRO!");
+				ESCREVA (" ");
+
 		FIM_PARA;
 	FIM_PARA;	
 
