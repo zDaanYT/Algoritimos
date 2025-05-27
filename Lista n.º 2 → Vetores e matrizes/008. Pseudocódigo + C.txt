@@ -30,7 +30,7 @@ INÍCIO
 	PARA i DE 1 ATÉ 3
 		PARA j DE 1 ATÉ 5
 			C[i][j] = A[i][j] + B[i][j];
-			ESCREVA (C[i][j], " ");
+			ESCREVA (" ", C[i][j]);
 		FIM_PARA;
 		ESCREVA ("\n");
 	FIM_PARA;	
