@@ -12,8 +12,8 @@ INÍCIO
 	
 	PARA i DE 1 ATÉ 100 FAÇA
 
-		ESCREVA "Informe Q[",i,"]: "; LEIA Q[i]; // QUANTIDADE DE PRODUTOS
-		ESCREVA "Informe P[",i,"]: "; LEIA P[i]; // PREÇO DOS PRODUTOS
+		ESCREVA ("Informe Q[",i,"]: "); LEIA Q[i]; // QUANTIDADE DE PRODUTOS
+		ESCREVA ("Informe P[",i,"]: "); LEIA P[i]; // PREÇO DOS PRODUTOS
 
 		// SOMATÓRIO faturamento = faturamento + (quantidade[i] * preço[i])
 
@@ -21,7 +21,7 @@ INÍCIO
 
 	FIM_PARA;
 	
-	ESCREVA "O faturamento total é de R$: ", faturamento;
+	ESCREVA ("O faturamento total é de R$: ", faturamento);
 
 FIM.
 
