@@ -12,7 +12,7 @@ INÍCIO
 
 	PARA i DE 1 ATÉ 4 FAÇA
 		PARA j DE 1 ATÉ 5 FAÇA
-			ESCREVA "Informe M[",i + 1,"][",j + 1,"] = "; LEIA M[i][j]; 
+			ESCREVA ("Informe M[",i + 1,"][",j + 1,"] = "); LEIA M[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
@@ -26,7 +26,7 @@ INÍCIO
 		total = total + SOMALINHA[i];
 	FIM_PARA;	
 
-	ESCREVA "A soma das linhas é igual a: ", total;
+	ESCREVA ("A soma das linhas é igual a: ", total);
 FIM.
 
 +---------------+
