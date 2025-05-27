@@ -13,7 +13,7 @@ INÍCIO
 	
 	PARA i DE 1 ATÉ 3
 		PARA j de 1 até 5	
-			ESCREVA "Informe A[",i + 1,"][",j + 1,"] = "; LEIA A[i][j]; 
+			ESCREVA ("Informe A[",i + 1,"][",j + 1,"] = "); LEIA A[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
@@ -21,7 +21,7 @@ INÍCIO
 
 	PARA i DE 1 ATÉ 3
 		PARA j DE 1 ATÉ 5	
-			ESCREVA "Informe B[",i + 1,"][",j + 1,"] = "; LEIA B[i][j]; 
+			ESCREVA ("Informe B[",i + 1,"][",j + 1,"] = "); LEIA B[i][j]; 
 		FIM_PARA;
 	FIM_PARA;
 
@@ -30,9 +30,9 @@ INÍCIO
 	PARA i DE 1 ATÉ 3
 		PARA j DE 1 ATÉ 5
 			C[i][j] = A[i][j] + B[i][j];
-			ESCREVA C[i][j], " ";
+			ESCREVA (C[i][j], " ");
 		FIM_PARA;
-			ESCREVA "\n";
+		ESCREVA ("\n");
 	FIM_PARA;	
 
 FIM.
