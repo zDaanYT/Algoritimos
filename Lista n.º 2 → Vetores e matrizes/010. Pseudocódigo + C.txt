@@ -36,4 +36,27 @@ FIM.
 
 #include <stdio.h>
 #include <locale.h>
-#define TAM 2 //MATRIZ OBRIGATÓRIAMENTE QUADRADA EX.: 2x2, 3x3...
+#define TAM 3 //MATRIZ OBRIGATÓRIAMENTE QUADRADA EX.: 2x2, 3x3...
+
+main(){
+    setlocale(LC_ALL, "Portuguese");
+    float M[TAM][TAM];
+    int i, j, n;
+
+    for(i = 0; i < TAM; i++){
+        for(j = 0; j < TAM; j++){
+            printf("Informe M[%d][%d]: ", i+1, j+1);
+            scanf("%f", &M[i][j]);
+        }
+    }
+
+    for(i = 0; i < TAM; i++){
+        printf("\n");
+        for(j = 0; j < TAM; j++){
+            if(i != j){
+                printf(" %.2f ", M[i][j]);
+            }else
+                printf("      ");
+        }
+    }
+}
