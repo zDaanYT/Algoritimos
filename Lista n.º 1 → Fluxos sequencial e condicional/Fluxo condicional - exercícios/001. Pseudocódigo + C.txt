@@ -6,10 +6,11 @@ ALGORÍTMO maior
 
 INÍCIO
 
-	VAR INTEIRO: v1, v2; //valores
+	VAR 
+	INTEIRO: v1, v2; // VALORES
 	
-	ESCREVA "Informe o 1º valor inteiro: "; LEIA v1;
-	ESCREVA "Informe o 2º valor inteiro: "; LEIA v2;
+	ESCREVA ("Informe o 1º valor inteiro: "); LEIA v1;
+	ESCREVA ("Informe o 2º valor inteiro: "); LEIA v2;
 
 	SE v1 > v2
 	ENTÃO 
@@ -19,7 +20,7 @@ INÍCIO
 		ENTÃO 
 			ESCREVA v2;
 		SENÃO
-			ESCREVA "Os valores são iguais!";
+			ESCREVA ("Os valores são iguais!");
 
 FIM.
 
