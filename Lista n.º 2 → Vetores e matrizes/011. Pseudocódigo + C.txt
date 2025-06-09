@@ -30,7 +30,6 @@ INÍCIO
 					achou == .V.;
 				SENÃO
 					r = r + 1;
-
 			ENQUANTO r < rep .E. .NÃO. achou;
 	
 		SE .NÃO. achou
@@ -46,11 +45,10 @@ INÍCIO
 			FIM_PARA;
 		
 			ESCREVA ("", V[i], f);
-				
+			
 		SE f > 1
 		ENTÃO
 			R[rep] = v[i]; // INSERE UM VALOR NO VETOR DE REPETIDOS
 			rep = rep + 1;
-		
  	FIM_PARA;	
 FIM.
