@@ -19,7 +19,7 @@ INÍCIO
 	PARA i DE 1 ATÉ n FAÇA
 		achou = .F.;
 
-	    	// VERIFICA SE V[i] ESTÁ EM NO VETOR DE REPETIDOS
+	    	// VERIFICA SE V[i] ESTÁ NO VETOR DE REPETIDOS R[r]
 
 		SE rep >= 1 
 		ENTÃO 
