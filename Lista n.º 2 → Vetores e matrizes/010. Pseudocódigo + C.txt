@@ -2,7 +2,7 @@
 |  PSEUDOCÓDIGO  |
 +----------------+
  
-ALGORÍTIMO 
+ALGORÍTIMO diagonal_nula
 
 INÍCIO
 	VAR REAL: M[n][n];
