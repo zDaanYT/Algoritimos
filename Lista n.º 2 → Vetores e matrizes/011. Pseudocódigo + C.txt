@@ -1,7 +1,7 @@
 +----------------+
 |  PSEUDOCÓDIGO  |
 +----------------+
-
+ 
 ALGORITIMO vetores_organizados
 
 INÍCIO
@@ -11,7 +11,7 @@ INÍCIO
 	ESCREVA ("Informe o valor de 'n': "); LEIA n;
 
 	PARA i DE 1 ATÉ n FAÇA
-	ESCREVA ("Informe, V[",i,"]: "); LEIA V[i];
+		ESCREVA ("Informe, V[",i,"]: "); LEIA V[i];
 	FIM_PARA;
 	
 	rep = 1; // NÚMERO DE REPTIDOS
@@ -46,7 +46,7 @@ INÍCIO
 			FIM_PARA;
 		
 			ESCREVA ("", V[i], f);
-		
+				
 		SE f > 1
 		ENTÃO
 			R[rep] = v[i]; // INSERE UM VALOR NO VETOR DE REPETIDOS
