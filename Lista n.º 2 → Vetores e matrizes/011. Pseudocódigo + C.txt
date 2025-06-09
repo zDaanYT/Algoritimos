@@ -1,0 +1,56 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORITIMO vetores_organizados
+
+INÍCIO
+	VAR INTEIRO:  V[n], R[r], i, j, r, f, rep;
+	LÓGICO: achou;
+
+	ESCREVA ("Informe o valor de 'n': "); LEIA n;
+
+	PARA i DE 1 ATÉ n FAÇA
+	ESCREVA ("Informe, V[",i,"]: "); LEIA V[i];
+	FIM_PARA;
+	
+	rep = 1; // NÚMERO DE REPTIDOS
+	
+	PARA i DE 1 ATÉ n FAÇA
+		achou = .F.;
+
+	    	// VERIFICA SE V[i] ESTÁ EM NO VETOR DE REPETIDOS
+
+		SE rep >= 1 
+		ENTÃO 
+			r = 1;
+			FAÇA
+				SE V[i] == R[r]
+				ENTÃO
+					achou == .V.;
+				SENÃO
+					r = r + 1;
+
+			ENQUANTO r < rep .E. .NÃO. achou;
+	
+		SE .NÃO. achou
+		ENTÃO
+			f = 0;
+			
+			// NO VETOR DE NUMEROS, CALCULA A FREQUÊNCIA
+	
+			PARA j DE 1 ATÉ n FAÇA
+				SE V[j] == V[i]
+				ENTÃO
+					f = f + 1;
+			FIM_PARA;
+		
+			ESCREVA ("", V[i], f);
+		
+		SE f > 1
+		ENTÃO
+			R[rep] = v[i]; // INSERE UM VALOR NO VETOR DE REPETIDOS
+			rep = rep + 1;
+		
+ 	FIM_PARA;	
+FIM.
