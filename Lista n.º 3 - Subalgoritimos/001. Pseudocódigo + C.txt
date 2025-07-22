@@ -46,12 +46,12 @@ void pares_0n(int n){
 }
 
 main(){
-    int num;
+	int num;
 	
-    printf("Informe um n. º inteiro: ");
-    scanf("%d", &num);
+    	printf("Informe um n. º inteiro: ");
+    	scanf("%d", &num);
 
-    pares_0n(num);
+    	pares_0n(num);
 }
 
 
