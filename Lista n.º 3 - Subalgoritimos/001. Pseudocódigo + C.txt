@@ -46,6 +46,7 @@ void pares_0n(int n){
 }
 
 main(){
+	setlocale(LC_ALL, "Portuguese");
 	int num;
 	
     	printf("Informe um n. º inteiro: ");
