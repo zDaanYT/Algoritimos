@@ -53,6 +53,7 @@ int mdc(int a, int b){
 }
 
 main(){
+	setlocale(LC_ALL, "Portuguese");
 	int num1, num2, resultado; 
 
 	printf("Informe o 1º inteiro: ");
