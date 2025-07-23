@@ -1,0 +1,60 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTIMO soma_0n
+
+FUNÇÃO INTEIRO soma_0n(INTEIRO: n)
+INÍCIO
+	VAR INTEIRO: i, soma;
+	
+	soma = 0;
+
+	PARA i DE 1 ATÉ n FAÇA
+		soma = soma + i;
+	FIM_PARA;
+	
+	RETORNE soma;
+FIM.
+
+// ALGORÍTIMO principal
+
+INÍCIO
+	VAR INTEIRO: num, resultado; // VARIÁVEIS LOCAIS
+	
+	ESCREVA(" ");
+	LEIA num;
+	
+	resultado = soma_0n(num);
+    	ESCREVA("A soma é: ", resultado);
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
+
+
+
+main(){
+	setlocale(LC_ALL, "Portuguese");
+
+
+	resultado = soma_0n(num);
+    	printf("A soma é: %d ", resultado);
+}
+
+
+
+
+
+
+
+	
+
+	
+	
