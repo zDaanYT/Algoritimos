@@ -20,7 +20,7 @@ FIM.
 INÍCIO
 	VAR INTEIRO: num; // VARIÁVEIS LOCAIS
 
-	ESCREVA ("Informe um n. º inteiro: ");
+	ESCREVA ("Informe um número inteiro: ");
 	LEIA num;
 
 	CHAME pares_0n(num);
@@ -40,7 +40,7 @@ void pares_0n(int n){
 
     	for(i = 0; i <= n; i++){
         	if(i % 2 == 0){
-            		printf("%d ", i);
+            		printf("%d, ", i);
         }
     		}
 }
@@ -48,12 +48,14 @@ void pares_0n(int n){
 main(){
 	setlocale(LC_ALL, "Portuguese");
 	int num;
-	
-    	printf("Informe um n. º inteiro: ");
+
+    	printf("Informe um número inteiro: ");
     	scanf("%d", &num);
 
     	pares_0n(num);
 }
+
+
 
 
 
