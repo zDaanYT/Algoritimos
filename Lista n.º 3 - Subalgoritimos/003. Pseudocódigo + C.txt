@@ -21,16 +21,22 @@ FIM.
 // ALGORÍTIMO principal
 
 INÍCIO
-	VAR REAL: base, expoente, resultado; // VARIÁVEIS LOCAIS
-	
+	VAR REAL: base, resultado; // VARIÁVEIS LOCAIS
+	INTEIRO: expoente;
+
 	ESCREVA ("Informe a base: ");
 	LEIA base;
 
 	ESCREVA ("A base será elevada a quanto? ");
 	LEIA expoente;
-	
-	resultado = potencia(base, expoente);
-    	ESCREVA(base, " elevado a ", expoente, " é: ", resultado);
+
+	SE base == 0 .E. expoente == 0
+	ENTÃO
+		ESCREVA("0 elevado a 0 é uma indeterminação.");
+	SENÃO
+		resultado = potencia(base, expoente);
+    		ESCREVA(base, " elevado a ", expoente, " é: ", resultado);
+		
 FIM.
 
 +---------------+
@@ -46,7 +52,7 @@ float potencia(float x, int n){
 	int i;
 	float resultado = 1;
 
-	for(i = 0; i <= n; i++){
+	for(i = 1; i <= n; i++){
 		resultado *= x;
 	}
 	return resultado;
@@ -54,7 +60,7 @@ float potencia(float x, int n){
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	float base, expoente, resultado;
+	float base, resultado;
 	int expoente;
 
 	printf("Informe a base: ");
@@ -63,8 +69,12 @@ main(){
 	printf("A base será elevada a quanto? ");
 	scanf("%d", &expoente);
 
-	resultado = potencia(base, expoente);
-    	printf(" %.0f elevado a %d é: %.1f", base, expoente, resultado);
+    	if(base == 0 && expoente == 0){
+        	printf("0 elevado a 0 é uma indeterminação.");
+   	}else {
+        	resultado = potencia(base, expoente);
+        	printf("%.0f elevado a %d é: %.1f", base, expoente, resultado);
+        }
 }
 
 
