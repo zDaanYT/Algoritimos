@@ -43,18 +43,18 @@ FIM.
 
 int mdc(int a, int b){
 	int aux;
-	
+
 	while (b != 0){
 		aux = b;
 		b = a % b;
-		a = aux;	
+		a = aux;
 	}
 	return a;
 }
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	int num1, num2, resultado; 
+	int num1, num2, resultado;
 
 	printf("Informe o 1º inteiro: ");
 	scanf("%d", &num1);
