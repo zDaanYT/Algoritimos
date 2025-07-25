@@ -41,13 +41,16 @@ FIM.
 int soma(int n){
 	int i, soma = 0;
 	for(i = 0; i <=n; i++){
-		soma += i
+		soma += i;
 	}
 }
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
+	int num;
 
+	printf("Infome um numero: ");
+	scanf("%d", &num);
 
 	resultado = soma_0n(num);
     	printf("A soma é: %d ", resultado);
