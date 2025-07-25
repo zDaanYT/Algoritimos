@@ -38,23 +38,26 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
-int soma_0n(int n){
-	int i, soma = 0;
-	for(i = 0; i <=n; i++){
-		soma += i;
-	}
+int soma_0n(int termo1, int termo2){
+	int soma = 0;
+
+    soma = (termo1 + termo2) * termo2 / 2;
 }
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	int num, resultado = 0;
+	int a, b, resultado = 0;
 
-	printf("Infome um numero: ");
-	scanf("%d", &num);
+	printf("Infome o primeiro termo (a1): ");
+	scanf("%d", &a);
 
-	resultado = soma_0n(num);
+	printf("Infome o último termo (an): ");
+	scanf("%d", &b);
+
+	resultado = soma_0n(a, b);
     printf("A soma é: %d ", resultado);
 }
+
 
 
 
