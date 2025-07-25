@@ -39,7 +39,7 @@ FIM.
 
 int soma_0n(int termo1, int termo2){
     int n = termo2 - termo1 + 1;
-    int soma = (termo1 + termo2) * n / 2; // fórmula da soma da PA
+    int soma = (termo1 + termo2) * n / 2;
     return soma;
 }
 
