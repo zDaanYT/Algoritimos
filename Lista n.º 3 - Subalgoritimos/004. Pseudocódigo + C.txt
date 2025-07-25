@@ -38,7 +38,7 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
-int soma(int n){
+int soma_0n(int n){
 	int i, soma = 0;
 	for(i = 0; i <=n; i++){
 		soma += i;
@@ -47,14 +47,15 @@ int soma(int n){
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	int num;
+	int num, resultado = 0;
 
 	printf("Infome um numero: ");
 	scanf("%d", &num);
 
 	resultado = soma_0n(num);
-    	printf("A soma é: %d ", resultado);
+    printf("A soma é: %d ", resultado);
 }
+
 
 
 
