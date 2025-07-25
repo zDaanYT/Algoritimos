@@ -6,10 +6,11 @@ ALGORÍTIMO soma_0n
 
 FUNÇÃO INTEIRO soma_0n(INTEIRO: termo1, INTEIRO: termo2)
 INÍCIO
-	VAR INTEIRO: soma;
-	
-	soma = 0;
-	soma = (termo1 + termo2) * termo2 / 2;
+	VAR INTEIRO: soma, n;
+
+	n = termo2 - termo1 + 1;
+	soma = (termo1 + termo2) * n / 2;
+	RETORNE soma;
 FIM.
 
 // ALGORÍTIMO principal
@@ -37,9 +38,9 @@ FIM.
 #include <math.h>
 
 int soma_0n(int termo1, int termo2){
-	int soma = 0;
-
-	soma = (termo1 + termo2) * termo2 / 2;
+    int n = termo2 - termo1 + 1;
+    int soma = (termo1 + termo2) * n / 2; // fórmula da soma da PA
+    return soma;
 }
 
 main(){
@@ -51,6 +52,10 @@ main(){
 
 	printf("Infome o último termo (an): ");
 	scanf("%d", &b);
+	
+	if(b < a){
+        	printf("O último termo deve ser maior ou igual ao primeiro!\n");
+    	}
 
 	resultado = soma_0n(a, b);
 	printf("O somatório dos números de %d até %d é: %d", a, b, resultado);
