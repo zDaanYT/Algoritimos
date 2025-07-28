@@ -51,14 +51,14 @@ FIM.
 #include <math.h>
 #define TAM 100
 
-float verifique(int **M){
+float verifique(float *M, int n){
 
 }
 
 main(){
     setlocale(LC_ALL, "Portuguese");
     int i = 0, n;
-    float M[TAM], menor, **M;
+    float M[TAM], menor;
 
     printf("Informe o valor de n: ");
     scanf("%d", &n);
