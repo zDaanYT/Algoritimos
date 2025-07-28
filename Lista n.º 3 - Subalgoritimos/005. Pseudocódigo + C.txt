@@ -6,36 +6,40 @@ ALGORÍTMO vetor_menor
 
 FUNÇÃO REAL: verifique(VAR REAL: M[n]; INTEIRO: n)
 INÍCIO
-    	VAR INTEIRO: i;
-	REAL: menor;
+    VAR INTEIRO: i;
+    VAR REAL: menor;
 
-    	menor = M[1];
+    menor = M[1];
 
-	PARA i DE 2 ATÉ n FAÇA
-		SE M[i] < menor 
-		ENTÃO
-			menor = M[i];
-	FIM_PARA;
+    PARA i DE 2 ATÉ n FAÇA
+        SE M[i] < menor 
+        ENTÃO
+            menor = M[i];
+    FIM_PARA;
 
-    	RETORNE menor;
+    RETORNE menor;
 FIM.
 
 // ALGORÍTMO principal
 
 INÍCIO
-    	VAR INTEIRO: i, n; 
-	VAR REAL: M[100], menor;
+    VAR INTEIRO: i, n; 
+    VAR REAL: M[100], menor;
 
-	ESCREVA("Informe o valor de n: "); LEIA n;
+    ESCREVA("Informe o valor de n: "); 
+    LEIA n;
 
-	PARA i DE 1 ATÉ n FAÇA
-        	ESCREVA("Digite o valor M[",i,"]: "); LEIA M[i];
-    		menor = verifique(M[i], n);
-	FIM_PARA;
+    PARA i DE 1 ATÉ n FAÇA
+        ESCREVA("Digite o valor M[",i,"]: "); 
+        LEIA M[i];
+    FIM_PARA;
 
-    	ESCREVA("O menor valor é: ", menor);
+    menor = verifique(M, n);
+
+    ESCREVA("O menor valor é: ", menor);
 
 FIM.
+
 
 +---------------+
 |	C	|
