@@ -4,7 +4,7 @@
 
 ALGORÍTMO vetor_menor
 
-FUNÇÃO REAL verifique(REAL: M[n], INTEIRO: n)
+FUNÇÃO REAL: verifique(REAL: M[n], INTEIRO: n)
 INÍCIO
     	VAR INTEIRO: i;
 	REAL: menor;
