@@ -2,7 +2,7 @@
 |  PSEUDOCÓDIGO  |
 +----------------+
 
-ALGORÍTIMO potencia
+ALGORÍTIMO potência
 
 FUNÇÃO REAL potencia (REAL: x, INTEIRO: n)
 INÍCIO
