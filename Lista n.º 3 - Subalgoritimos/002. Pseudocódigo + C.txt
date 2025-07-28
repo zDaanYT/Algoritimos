@@ -41,15 +41,15 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
-int mdc(int a, int b){
+int mdc(int n1, int n2){
 	int aux;
 
-	while (b != 0){
-		aux = b;
-		b = a % b;
-		a = aux;
+	while (n2 != 0){
+		aux = n2;
+		n2 = a % n2;
+		n1 = aux;
 	}
-	return a;
+	return n1;
 }
 
 main(){
