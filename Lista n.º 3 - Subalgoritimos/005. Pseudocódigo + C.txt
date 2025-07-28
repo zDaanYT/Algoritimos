@@ -57,15 +57,15 @@ float verifique(float *M, int n){
 
 main(){
     setlocale(LC_ALL, "Portuguese");
-    int i = 0, n;
+    int i, n;
     float M[TAM], menor;
 
     printf("Informe o valor de n: ");
     scanf("%d", &n);
 
-    for(i = 1; i<=n; i++){
+    for(i = 0; i<=n; i++){
         printf("Digite o valor M[%d]: ", i);
-        scanf("%f", M[i]);
+        scanf("%f", &M[i]);
     }
         menor = verifique(M, n);
         printf("O menor valor é: ", menor);
