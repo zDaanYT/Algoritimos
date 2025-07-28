@@ -61,7 +61,7 @@ float verifique(float *M, int n){
         if(M[i] < menor){
             menor = M[i];  
         }
-
+    }
     return menor;
 }
 
