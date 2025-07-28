@@ -31,7 +31,7 @@ INÍCIO
         	ESCREVA("Digite o valor M[", i, "]: "); LEIA M[i];
 	FIM_PARA;
 
-    	menor = verifique(M, n);
+    	menor = verifique(M[i], n);
 
     	ESCREVA("O menor valor é: ", menor);
 
