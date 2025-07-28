@@ -4,7 +4,7 @@
 
 ALGORÍTIMO potência
 
-FUNÇÃO REAL potencia (REAL: x, INTEIRO: n)
+FUNÇÃO REAL: potencia (REAL: x, INTEIRO: n)
 INÍCIO
 	VAR INTEIRO: i;
 	REAL: resultado;
