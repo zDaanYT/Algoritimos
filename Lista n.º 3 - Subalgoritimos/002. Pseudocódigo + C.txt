@@ -4,17 +4,17 @@
 
 ALGORÍTIMO mdc
 
-FUNÇÃO INTEIRO mdc (INTEIRO: a, b)
+FUNÇÃO INTEIRO mdc (INTEIRO: n1, n2)
 INÍCIO
 	VAR INTEIRO: aux; // VARIÁVEIS LOCAIS
 
-	ENQUANTO b != 0 FAÇA
-		aux = b;
-		b = a % b;
-		a = aux;
+	ENQUANTO n2 != 0 FAÇA
+		aux = n2;
+		n2 = n1 % n2;
+		n1 = aux;
 	FIM_ENQUANTO;
 
-	RETORNE a;
+	RETORNE n1;
 FIM.
 
 // ALGORÍTIMO principal
