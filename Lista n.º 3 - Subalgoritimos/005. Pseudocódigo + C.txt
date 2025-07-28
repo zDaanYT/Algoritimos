@@ -23,7 +23,7 @@ FIM.
 
 INÍCIO
     	VAR INTEIRO: i, n; 
-	VAR REAL: M[n], maior, menor;
+	VAR REAL: M[n], menor;
 
 	ESCREVA("Informe o valor de n: "); LEIA n;
 
