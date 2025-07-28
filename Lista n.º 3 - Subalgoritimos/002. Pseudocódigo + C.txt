@@ -8,7 +8,7 @@ FUNÇÃO INTEIRO mdc (INTEIRO: a, b)
 INÍCIO
 	VAR INTEIRO: aux; // VARIÁVEIS LOCAIS
 
-	ENQUANTO b != 0
+	ENQUANTO b != 0 FAÇA
 		aux = b;
 		b = a % b;
 		a = aux;
