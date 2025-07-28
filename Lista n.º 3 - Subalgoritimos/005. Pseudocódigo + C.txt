@@ -63,10 +63,10 @@ main(){
     printf("Informe o valor de n: ");
     scanf("%d", &n);
 
-    for(i = 0; i<=n; i++){
+    for(i = 0; i <= n; i++){
         printf("Digite o valor M[%d]: ", i);
         scanf("%f", &M[i]);
     }
         menor = verifique(M, n);
-        printf("O menor valor é: ", menor);
+        printf("O menor valor é: %.2f\n", menor);
 }
