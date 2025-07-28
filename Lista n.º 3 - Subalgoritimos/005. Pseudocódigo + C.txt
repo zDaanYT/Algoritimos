@@ -4,7 +4,7 @@
 
 ALGORÍTMO vetor_menor
 
-FUNÇÃO REAL: verifique(REAL: M[n], INTEIRO: n)
+FUNÇÃO REAL: verifique(VAR REAL: M[n]; INTEIRO: n)
 INÍCIO
     	VAR INTEIRO: i;
 	REAL: menor;
@@ -15,6 +15,7 @@ INÍCIO
 		SE M[i] < menor 
 		ENTÃO
 			menor = M[i];
+	FIM_PARA;
 
     	RETORNE menor;
 FIM.
@@ -23,12 +24,12 @@ FIM.
 
 INÍCIO
     	VAR INTEIRO: i, n; 
-	VAR REAL: M[n], menor;
+	VAR REAL: M[100], menor;
 
 	ESCREVA("Informe o valor de n: "); LEIA n;
 
 	PARA i DE 1 ATÉ n FAÇA
-        	ESCREVA("Digite o valor M[", i, "]: "); LEIA M[i];
+        	ESCREVA("Digite o valor M[",i,"]: "); LEIA M[i];
 	FIM_PARA;
 
     	menor = verifique(M[i], n);
