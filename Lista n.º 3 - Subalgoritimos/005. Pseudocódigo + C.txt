@@ -1,0 +1,48 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTMO vetor_menor
+
+FUNÇÃO REAL verifique(REAL VETOR M[n], INTEIRO n)
+INÍCIO
+    	VAR INTEIRO: i;
+	REAL: menor;
+
+    	menor = M[1];
+
+	PARA i DE 2 ATÉ n FAÇA
+		SE M[i] < menor 
+		ENTÃO
+			menor = M[i];
+
+    	RETORNE menor;
+FIM.
+
+// ALGORÍTMO principal
+
+INÍCIO
+    	VAR INTEIRO: i, n; 
+	VAR REAL: M[n], maior, menor;
+
+	ESCREVA("Informe o valor de n: "); LEIA n;
+
+	PARA i DE 1 ATÉ n FAÇA
+        	ESCREVA("Digite o valor M[", i, "]: "); LEIA M[i];
+	FIM_PARA;
+
+    	menor = verifique(M, n);
+
+    	ESCREVA("O menor valor é: ", menor);
+
+FIM.
+
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
