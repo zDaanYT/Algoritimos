@@ -4,7 +4,7 @@
 
 ALGORÍTIMO soma_0n
 
-FUNÇÃO INTEIRO soma_0n(INTEIRO: termo1, INTEIRO: termo2)
+FUNÇÃO INTEIRO soma_0n(INTEIRO: termo1, termo2)
 INÍCIO
 	VAR INTEIRO: soma, n;
 
