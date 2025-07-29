@@ -8,8 +8,8 @@ FUNÇÃO INTEIRO: soma_vetores(VAR INTEIRO: M[]; INTEIRO: n)
 INÍCIO
 	VAR INTEIRO: i, soma;
 
-    i = 1;
-    soma = 0;
+    	i = 1;
+    	soma = 0;
 
 	ENQUANTO i <= n FAÇA
 		soma = soma + M[i];
