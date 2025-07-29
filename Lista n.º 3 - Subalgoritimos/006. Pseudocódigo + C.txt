@@ -4,11 +4,14 @@
 
 ALGORÍTMO soma_vetores
 
-FUNÇÃO INTEIRO: soma_vetores(VAR INTEIRO: M[n]; INTEIRO: n)
+FUNÇÃO INTEIRO: soma_vetores(VAR INTEIRO: M[]; INTEIRO: n)
 INÍCIO
-	VAR INTEIRO: i, soma, n;
+	VAR INTEIRO: i, soma;
 
-	ENQUANTO i != n + 1 FAÇA
+    i = 1;
+    soma = 0;
+
+	ENQUANTO i <= n FAÇA
 		soma = soma + M[i];
 		i = i + 1;
 	FIM_ENQUANTO;
@@ -19,19 +22,17 @@ FIM.
 // ALGORÍTMO principal
 
 INÍCIO
-    	VAR INTEIRO: i, n, soma, M[n];
+    	VAR INTEIRO: i, n, soma, M[100];
 
 	ESCREVA("Informe o valor de n: "); LEIA n;
 
 	PARA i DE 1 ATÉ n FAÇA
-        	ESCREVA("Digite o valor M[",i,"]: "); LEIA M[i];
+        	ESCREVA("Digite o valor M[",i + 1,"]: "); LEIA M[i];
 	FIM_PARA;
 
-    	soma = soma_vetores(M, n);
-
-    	ESCREVA("A soma do Vetor é: ", soma);
-
+    	ESCREVA("A soma do Vetor é: ", soma_vetores(M, n));
 FIM.
+
 
 
 +---------------+
