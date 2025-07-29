@@ -46,7 +46,7 @@ int mdc(int n1, int n2){
 
 	while (n2 != 0){
 		aux = n2;
-		n2 = a % n2;
+		n2 = n1 % n2;
 		n1 = aux;
 	}
 	return n1;
