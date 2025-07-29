@@ -1,0 +1,44 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTMO soma_vetores
+
+FUNÇÃO INTEIRO: soma_vetores(VAR INTEIRO: M[n]; INTEIRO: n)
+INÍCIO
+	VAR INTEIRO: i, soma, n;
+
+	ENQUANTO i != n + 1 FAÇA
+		soma = soma + M[i];
+		i = i + 1;
+	FIM_ENQUANTO;
+
+	RETORNE soma;
+FIM.
+
+// ALGORÍTMO principal
+
+INÍCIO
+    	VAR INTEIRO: i, n, soma, M[n];
+
+	ESCREVA("Informe o valor de n: "); LEIA n;
+
+	PARA i DE 1 ATÉ n FAÇA
+        	ESCREVA("Digite o valor M[",i,"]: "); LEIA M[i];
+	FIM_PARA;
+
+    	soma = soma_vetores(M, n);
+
+    	ESCREVA("A soma do Vetor é: ", soma);
+
+FIM.
+
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
