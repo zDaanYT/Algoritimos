@@ -74,7 +74,7 @@ main(){
     scanf("%d", &n);
 
     for(i = 0; i < n; i++){
-        printf("Digite o valor M[%d]: ", i);
+        printf("Digite o valor M[%d]: ", i+1);
         scanf("%f", &M[i]);
     }
         menor = verifique(M, n);
