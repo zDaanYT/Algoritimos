@@ -22,12 +22,12 @@ FIM.
 // ALGORÍTMO principal
 
 INÍCIO
-    	VAR INTEIRO: i, n, soma, M[100];
+    	VAR INTEIRO: i, n, M[100];
 
 	ESCREVA("Informe o valor de n: "); LEIA n;
 
 	PARA i DE 1 ATÉ n FAÇA
-        	ESCREVA("Digite o valor M[",i + 1,"]: "); LEIA M[i];
+        	ESCREVA("Digite o valor M[",i,"]: "); LEIA M[i];
 	FIM_PARA;
 
     	ESCREVA("A soma do Vetor é: ", soma_vetores(M, n));
@@ -43,3 +43,4 @@ FIM.
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
