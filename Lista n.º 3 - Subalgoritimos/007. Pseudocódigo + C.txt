@@ -4,17 +4,17 @@
 
 ALGORÍTIMO soma_cubo
 
-FUNÇÃO INTEIRO: soma_cubo(INTEIRO: termo1, termo2)
+FUNÇÃO INTEIRO: soma_cubo(INTEIRO: termo1, termoN)
 INÍCIO
 	VAR INTEIRO: soma, i;
 
 	soma = 0;
 
-	SE termo1 == 0 .E. termo2 == 0
+	SE termo1 == 0 .E. termoN == 0
 	ENTÃO
 		soma = 0;
 	SENÃO
-		n = termo2 - termo1 + 1;
+		n = termoN - termo1 + 1;
 	
 		PARA i DE 1 ATÉ n FAÇA
 			soma = soma + i*i*i;
@@ -26,19 +26,19 @@ FIM.
 // ALGORÍTIMO principal
 
 INÍCIO
-	VAR INTEIRO: t1, t2; // VARIÁVEIS LOCAIS
+	VAR INTEIRO: t1, tN; // VARIÁVEIS LOCAIS
 	
-	ESCREVA("Infome o primeiro termo (a1): ");
+	ESCREVA("Infome o primeiro termo (termo 1): ");
 	LEIA t1;
 
-	ESCREVA("Infome o último termo (an): ");
-	LEIA t2;
+	ESCREVA("Infome o último termo (termo N): ");
+	LEIA tN;
 
-	SE t2 < t1
+	SE tN < t1
 	ENTÃO
 		ESCREVA("O ultimo termo é menor que o primeiro!");
 	SENÃO
-    		ESCREVA("O somatório dos números elevados ao cubo de ",t1," até ",t2," é: ", soma_cubo(t1, t2);
+    		ESCREVA("O somatório dos números elevados ao cubo de ",t1," até ",tN," é: ", soma_cubo(t1, tN);
 FIM.
 
 +---------------+
@@ -49,5 +49,5 @@ FIM.
 #include <stdio.h>
 #include <locale.h>
 #include <conio.h>
-
 #include <math.h>
+
