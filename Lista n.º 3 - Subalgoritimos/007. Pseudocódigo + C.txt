@@ -4,10 +4,12 @@
 
 ALGORÍTIMO soma_cubo
 
-FUNÇÃO INTEIRO: soma_cubo(VAR INTEIRO: termo1, termo2)
+FUNÇÃO INTEIRO: soma_cubo(INTEIRO: termo1, termo2)
 INÍCIO
 	VAR INTEIRO: soma, i;
-	
+
+	soma = 0;
+
 	SE termo1 == 0 .E. termo2 == 0
 	ENTÃO
 		soma = 0;
@@ -24,15 +26,15 @@ FIM.
 // ALGORÍTIMO principal
 
 INÍCIO
-	VAR INTEIRO: t1, t2, resultado; // VARIÁVEIS LOCAIS
+	VAR INTEIRO: t1, t2; // VARIÁVEIS LOCAIS
 	
 	ESCREVA("Infome o primeiro termo (a1): ");
 	LEIA t1;
 
-	ESCREVA("Infome o último termo (an):  ");
+	ESCREVA("Infome o último termo (an): ");
 	LEIA t2;
 
-	SE termo2 < termo1
+	SE t2 < t1
 	ENTÃO
 		ESCREVA("O ultimo termo é menor que o primeiro!");
 	SENÃO
@@ -47,4 +49,5 @@ FIM.
 #include <stdio.h>
 #include <locale.h>
 #include <conio.h>
+
 #include <math.h>
