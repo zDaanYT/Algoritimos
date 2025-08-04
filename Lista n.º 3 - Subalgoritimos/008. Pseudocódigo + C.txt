@@ -1,0 +1,47 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTIMO 
+
+PROCEDIMENTO binario(INTEIRO: n)
+INÍCIO
+	VAR INTEIRO: bin[8], i;
+
+	PARA i DE 1 ATÉ 8 FAÇA
+		bin[i] = 0;
+	FIM_PARA;
+
+	i = 8;
+	
+	ENQUANTO n > 0 FAÇA
+		bin[i] = n % 2;
+		n = INT(n / 2);
+		i = i - 1;
+	FIM_ENQUANTO;
+	
+	PARA i DE 1 ATÉ 8 FAÇA
+		ESCREVA (" ", bin[i]);
+	FIM_PARA;
+FIM.
+
+// ALGORÍTIMO principal
+
+INÍCIO
+	VAR INTEIRO: n; // VARIÁVEIS LOCAIS
+	
+	ESCREVA("Infome o n: ");
+	LEIA n;
+	
+	CHAME binario(n);
+FIM.
+
++---------------+
+|	C	|
++---------------+
+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
