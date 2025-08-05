@@ -44,3 +44,30 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
+int soma_vetores(int *M, int n){
+    int i = 0, soma = 0;
+
+    do{
+        soma = soma + M[i];
+		i++;
+    } while(i < n);
+
+    return soma;
+}
+
+main(){
+    int i, n, M[100];
+    setlocale(LC_ALL, "portuguese");
+
+    printf("Informe o valor de n: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++){
+        printf("Digite o valor M[%d]: ", i + 1);
+        scanf("%d", &M[i]);
+    }
+
+    printf("A soma do Vetor é: %d", soma_vetores(M, n));
+}
+
+
