@@ -12,7 +12,7 @@ INÍCIO
 
 	SE termo1 == 0 .E. termoN == 0
 	ENTÃO
-		soma = 0;
+		retorn soma;
 	SENÃO
 		n = termoN - termo1 + 1;
 	
@@ -45,10 +45,43 @@ FIM.
 |	C	|
 +---------------+
 
-
 #include <stdio.h>
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
+int soma_cubo(int termo1, int termoN){
+    int i = 0, soma = 0, n;
+
+    if(termo1 == 0 && termoN == 0){
+        return soma;
+    } else {
+        n = termoN - termo1 + 1;
+
+        for(i = 0; i <= n; i++){
+            soma = soma + i * i * i;
+        }
+    }
+    return soma;
+}
+
+main(){
+    int t1, tN;
+    setlocale(LC_ALL, "portuguese");
+
+    printf("Infome o primeiro termo (termo 1): ");
+    scanf("%d", &t1);
+
+    printf("Infome o último termo (termo N): ");
+    scanf("%d", &tN);
+
+    if(tN < t1){
+        printf("O ultimo termo é menor que o primeiro!");
+    } else
+        printf("O somatório dos números elevados ao cubo de %d até %d é: %d",t1, tN, soma_cubo(t1, tN));
+}
+
+
+
 
 
