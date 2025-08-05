@@ -12,7 +12,7 @@ INÍCIO
 
 	SE termo1 == 0 .E. termoN == 0
 	ENTÃO
-		retorn soma;
+		RETORNE soma;
 	SENÃO
 		n = termoN - termo1 + 1;
 	
@@ -59,7 +59,7 @@ int soma_cubo(int termo1, int termoN){
         n = termoN - termo1 + 1;
 
         for(i = 0; i <= n; i++){
-            soma = soma + i * i * i;
+            soma =+ i * i * i;
         }
     }
     return soma;
@@ -80,6 +80,7 @@ main(){
     } else
         printf("O somatório dos números elevados ao cubo de %d até %d é: %d",t1, tN, soma_cubo(t1, tN));
 }
+
 
 
 
