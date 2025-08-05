@@ -38,7 +38,7 @@ INÍCIO
 	ENTÃO
 		ESCREVA("O ultimo termo é menor que o primeiro!");
 	SENÃO
-    		ESCREVA("O somatório dos números elevados ao cubo de ",t1," até ",tN," é: ", soma_cubo(t1, tN);
+    		ESCREVA("O somatório dos números elevados ao cubo de ",t1," até ",tN," é: ", soma_cubo(t1, tN));
 FIM.
 
 +---------------+
@@ -50,4 +50,5 @@ FIM.
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
 
