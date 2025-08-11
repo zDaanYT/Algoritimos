@@ -42,11 +42,12 @@ FIM.
 
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
 
