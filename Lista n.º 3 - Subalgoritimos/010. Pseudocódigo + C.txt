@@ -9,11 +9,11 @@ INÍCIO
 	VAR INTEIRO: original, invertido, resto;
 	
 	original = num;
-	invertido  = 0;
+	invertido = 0;
 
 	ENQUANTO num > 0 FAÇA
 		resto = num % 10;
-		invertido  = (invertido  * 10) + resto;
+		invertido = (invertido  * 10) + resto;
 		num = INT(num / 10);
 	FIM_ENQUANTO;
 
@@ -49,6 +49,7 @@ FIM.
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
 
 
 
