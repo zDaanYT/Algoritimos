@@ -14,7 +14,7 @@ INÍCIO
 	ENQUANTO num > 0 FAÇA
 		resto = num % 10;
 		invertido  = (invertido  * 10) + resto;
-		num = num / 10;
+		num = INT(num / 10);
 	FIM_ENQUANTO;
 
 	SE original = invertido
@@ -49,5 +49,6 @@ FIM.
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
 
 
