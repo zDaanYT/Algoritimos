@@ -6,43 +6,43 @@ ALGORÍTMO vetor_maior
 
 FUNÇÃO REAL: verifique(VAR REAL: M[n]; INTEIRO: n)
 INÍCIO
-    VAR INTEIRO: i;
-    VAR REAL: maior;
+        VAR INTEIRO: i;
+        VAR REAL: maior;
 
-    maior = M[1];
+        maior = M[1];
 
-    PARA i DE 2 ATÉ n FAÇA
-        SE M[i] > maior 
-        ENTÃO
-            maior = M[i];
-    FIM_PARA;
+        PARA i DE 2 ATÉ n FAÇA
+                SE M[i] > maior 
+                ENTÃO
+                        maior = M[i];
+        FIM_PARA;
 
-    RETORNE maior;
+        RETORNE maior;
 FIM.
 
 // ALGORÍTMO principal
 
 INÍCIO
-    VAR INTEIRO: i, n; 
-    REAL: M[100], maior;
+        VAR INTEIRO: i, n; 
+        REAL: M[100], maior;
 
-    ESCREVA("Informe o valor de n: "); 
-    LEIA n;
+        ESCREVA("Informe o valor de n: "); 
+        LEIA n;
+        
+        PARA i DE 1 ATÉ n FAÇA
+                ESCREVA("Digite o valor M[",i,"]: "); 
+                LEIA M[i];
+        FIM_PARA;
 
-    PARA i DE 1 ATÉ n FAÇA
-        ESCREVA("Digite o valor M[",i,"]: "); 
-        LEIA M[i];
-    FIM_PARA;
-
-    maior = verifique(M, n);
-
-    ESCREVA("O maior valor é: ", maior);
+        maior = verifique(M, n);
+    
+        ESCREVA("O maior valor é: ", maior);
 
 FIM.
 
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
@@ -79,4 +79,5 @@ main(){
     }
         maior = verifique(M, n);
         printf("O maior valor é: %.2f\n", maior);
+
 }
