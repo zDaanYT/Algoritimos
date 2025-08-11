@@ -29,7 +29,7 @@ INÍCIO
 FIM.
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
@@ -60,3 +60,4 @@ main(){
 	resultado = soma_0n(a, b);
 	printf("O somatório dos números de %d até %d é: %d", a, b, resultado);
 }
+
