@@ -36,7 +36,7 @@ FIM.
 
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
@@ -69,5 +69,6 @@ main(){
 
     printf("A soma do Vetor é: %d", soma_vetores(M, n));
 }
+
 
 
