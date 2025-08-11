@@ -1,0 +1,52 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTMO palindromo
+
+FUNÇÃO LÓGICO: verifique(INTEIRO: num)
+INÍCIO
+	VAR INTEIRO: original, invertido , resto;
+	
+	original = num;
+	invertido  = 0;
+
+	ENQUANTO num > 0 FAÇA
+		resto = num % 10;
+		invertido  = (invertido  * 10) + resto;
+		num = num / 10;
+	FIM_ENQUANTO;
+
+	SE original = invertido
+	ENTÃO
+		RETORNE .V.;
+	SENÃO
+		RETORNE .F.;
+FIM.
+
+// ALGORÍTMO principal
+
+INÍCIO
+	VAR INTEIRO: num; 
+
+    	ESCREVA("Informe um número: "); 
+    	LEIA num;
+
+	SE verifique(num)
+	ENTÃO
+		ESCREVA("O número ",num," é palíndromo.");
+	SENÃO
+		ESCREVA("O número ",num," não é palíndromo.");
+
+FIM.
+
+
++---------------+
+|	C	|
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
+
