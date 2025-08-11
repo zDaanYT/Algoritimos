@@ -6,7 +6,7 @@ ALGORÍTMO palindromo
 
 FUNÇÃO LÓGICO: verifique(INTEIRO: num)
 INÍCIO
-	VAR INTEIRO: original, invertido , resto;
+	VAR INTEIRO: original, invertido, resto;
 	
 	original = num;
 	invertido  = 0;
@@ -49,6 +49,7 @@ FIM.
 #include <locale.h>
 #include <conio.h>
 #include <math.h>
+
 
 
 
