@@ -42,7 +42,7 @@ INÍCIO
 FIM.
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
@@ -80,6 +80,7 @@ main(){
     } else
         printf("O somatório dos números elevados ao cubo de %d até %d é: %d",t1, tN, soma_cubo(t1, tN));
 }
+
 
 
 
