@@ -42,7 +42,7 @@ FIM.
 
 
 +---------------+
-|	C	|
+|	    C       |
 +---------------+
 
 #include <stdio.h>
@@ -80,3 +80,4 @@ main(){
         menor = verifique(M, n);
         printf("O menor valor é: %.2f\n", menor);
 }
+
