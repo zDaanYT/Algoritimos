@@ -44,5 +44,36 @@ FIM.
 #include <stdio.h>
 #include <locale.h>
 #include <conio.h>
-
 #include <math.h>
+
+void binario(int n){
+	int bin[8], i;
+
+	for(i = 0; i < 8; i++){
+		bin[i] = 0;
+	}
+
+	i = 8;
+
+	while(n > 0){
+		bin[i] = n % 2;
+		n = INT(n / 2);
+		i = i - 1;
+	}
+
+	for(i = 0; i < 8; i++){
+		printf("%d", bin[i]);
+	}
+}
+
+main(){
+	int n;
+	setlocale(LC_ALL, "Portuguese");
+	
+	printf("Informe o valor de n: ");
+	scanf("%d", &n);
+	
+	binario(n);
+
+}
+
