@@ -17,7 +17,7 @@ INÍCIO
 	ENQUANTO n > 0 FAÇA
 		bin[i] = n % 2;
 		n = n / 2;
-		i = i - 1;
+		i--;
 	FIM_ENQUANTO;
 	
 	PARA i DE 1 ATÉ 8 FAÇA
@@ -76,5 +76,6 @@ main(){
 	binario(n);
 
 }
+
 
 
