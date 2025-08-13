@@ -16,8 +16,8 @@ INÍCIO
 	
 	ENQUANTO n > 0 FAÇA
 		bin[i] = n % 2;
-		n = n / 2;
-		i--;
+		n = INT(n / 2);
+		i = i - 1;
 	FIM_ENQUANTO;
 	
 	PARA i DE 1 ATÉ 8 FAÇA
@@ -30,10 +30,14 @@ FIM.
 INÍCIO
 	VAR INTEIRO: n; // VARIÁVEIS LOCAIS
 	
-	ESCREVA("Infome o n: ");
+	ESCREVA("Informe o valor de n (0 a 255): ");
 	LEIA n;
-	
-	CHAME binario(n);
+
+	SE n < 0 .OU. n > 255
+	ENTÃO
+		ESCREVA ("Valor inválido! Insira um número entre 0 e 255.\n");
+	SENÃO
+		CHAME binario(n);
 FIM.
 
 +---------------+
@@ -49,19 +53,19 @@ FIM.
 void binario(int n){
 	int bin[8], i;
 
-	for(i = 0; i < 8; i++){
+	for(i = 0; i <= 7; i++){
 		bin[i] = 0;
 	}
 
-	i = 8;
+	i = 7;
 
 	while(n > 0){
 		bin[i] = n % 2;
-		n = INT(n / 2);
-		i = i - 1;
+		n = n / 2;
+		i--;
 	}
 
-	for(i = 0; i < 8; i++){
+	for(i = 0; i <= 7; i++){
 		printf("%d", bin[i]);
 	}
 }
@@ -69,13 +73,17 @@ void binario(int n){
 main(){
 	int n;
 	setlocale(LC_ALL, "Portuguese");
-	
-	printf("Informe o valor de n: ");
-	scanf("%d", &n);
-	
-	binario(n);
 
+    printf("Informe o valor de n (0 a 255): ");
+    scanf("%d", &n);
+
+    if (n < 0 || n > 255) {
+        printf("Valor inválido! Insira um número entre 0 e 255.\n");
+    } else {
+        binario(n);
+    }
 }
+
 
 
 
