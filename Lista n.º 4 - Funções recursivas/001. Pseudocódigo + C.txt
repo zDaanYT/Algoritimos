@@ -1,0 +1,71 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+// PROCEDIMENTO pares_0n em RECURSIVIDADE
+
+ALGORÍTIMO pares_0n
+
+PROCEDIMENTO pares_0n (INTEIRO: n)
+INÍCIO
+	VAR INTEIRO: i; // VARIÁVEIS LOCAIS
+
+	PARA i DE 0 ATÉ n FAÇA
+		SE i % 2 == 0 
+		ENTÃO
+			ESCREVA i;
+	FIM_PARA;
+FIM.
+
+// ALGORÍTIMO principal
+
+INÍCIO
+	VAR INTEIRO: num; // VARIÁVEIS LOCAIS
+
+	ESCREVA ("Informe um número inteiro: ");
+	LEIA num;
+
+	CHAME pares_0n(num);
+FIM.
+
++---------------+
+|	    C       |
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
+
+void pares_0n(int n){
+	int i;
+
+    	for(i = 0; i <= n; i++){
+        	if(i % 2 == 0){
+            		printf("%d, ", i);
+        }
+    		}
+}
+
+main(){
+	setlocale(LC_ALL, "Portuguese");
+	int num;
+
+    	printf("Informe um número inteiro: ");
+    	scanf("%d", &num);
+
+    	pares_0n(num);
+}
+
+
+
+
+
+
+
+
+
+	
+
+	
+	

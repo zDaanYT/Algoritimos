@@ -1,0 +1,78 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+// FUNÇÃO potência em RECURSIVIDADE
+
+ALGORÍTIMO potencia
+
+FUNÇÃO potencia (REAL: x, INTEIRO: n)
+INÍCIO
+	SE n == 0
+	ENTÃO
+		RETORNE 1;
+	SENÃO
+		RETORNE x * potencia(x, n - 1);
+FIM.
+
+// ALGORÍTIMO principal
+
+INÍCIO
+	VAR REAL: base, resultado; // VARIÁVEIS LOCAIS
+	INTEIRO: expoente;
+
+	ESCREVA ("Informe a base: ");
+	LEIA base;
+
+	ESCREVA ("A base será elevada a quanto? ");
+	LEIA expoente;
+
+	SE base == 0 .E. expoente == 0
+	ENTÃO
+		ESCREVA("0 elevado a 0 é uma indeterminação.");
+	SENÃO
+		resultado = potencia(base, expoente);
+    		ESCREVA(base, " elevado a ", expoente, " é: ", resultado);
+FIM.
+
++---------------+
+|       C       |
++---------------+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <math.h>
+
+void pares_0n(int n){
+	int i;
+
+    	for(i = 0; i <= n; i++){
+        	if(i % 2 == 0){
+            		printf("%d, ", i);
+        }
+    		}
+}
+
+main(){
+	setlocale(LC_ALL, "Portuguese");
+	int num;
+
+    	printf("Informe um número inteiro: ");
+    	scanf("%d", &num);
+
+    	pares_0n(num);
+}
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
