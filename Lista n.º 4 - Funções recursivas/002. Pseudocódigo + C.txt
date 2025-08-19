@@ -28,7 +28,7 @@ INÍCIO
 	LEIA num2;
 	
 	resultado = mdc(num1, num2);
-    	ESCREVA("O MDC entre ", num1, " e ", num2, " é: ", resultado);
+    ESCREVA("O MDC entre ", num1, " e ", num2, " é: ", resultado);
 FIM.
 
 +---------------+
@@ -72,4 +72,5 @@ main(){
 
 	
 	
+
 
