@@ -8,13 +8,11 @@ ALGORÍTIMO pares_0n
 
 PROCEDIMENTO pares_0n (INTEIRO: n)
 INÍCIO
-	VAR INTEIRO: i; // VARIÁVEIS LOCAIS
-
-	PARA i DE 0 ATÉ n FAÇA
-		SE i % 2 == 0 
-		ENTÃO
-			ESCREVA i;
-	FIM_PARA;
+	SE n == 0
+	ENTÃO
+		RETORNE 0;
+	SENÃO
+		RETORNE pares0n(n, n-1 % 2);
 FIM.
 
 // ALGORÍTIMO principal
