@@ -9,7 +9,7 @@ ALGORÍTIMO pares_0n
 PROCEDIMENTO pares_0n (INTEIRO: n)
 INÍCIO
     SE n < 0 ENTÃO
-        RETORNE
+        RETORNE n
     SENÃO
         pares_0n(n - 1);
         SE n % 2 == 0 
@@ -69,4 +69,5 @@ main(){
 
 	
 	
+
 
