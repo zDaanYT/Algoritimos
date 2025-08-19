@@ -44,24 +44,30 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
-void pares_0n(int n){
-	int i;
-
-    	for(i = 0; i <= n; i++){
-        	if(i % 2 == 0){
-            		printf("%d, ", i);
-        }
-    		}
+float potencia(float x, int n){
+    if(n == 0){
+        return 1;
+    }else
+        return x * potencia(x, n - 1);
 }
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	int num;
+	float base, resultado;
+	int expoente;
 
-    	printf("Informe um número inteiro: ");
-    	scanf("%d", &num);
+	printf("Informe a base: ");
+	scanf("%f", &base);
 
-    	pares_0n(num);
+	printf("A base será elevada a quanto? ");
+	scanf("%d", &expoente);
+
+	if(base == 0 && expoente == 0){
+        	printf("0 elevado a 0 é uma indeterminação.");
+   	}else {
+        	resultado = potencia(base, expoente);
+        	printf("%.0f elevado a %d é: %.1f", base, expoente, resultado);
+    }
 }
 
 
@@ -72,7 +78,9 @@ main(){
 
 
 
+
 	
 
 	
 	
+
