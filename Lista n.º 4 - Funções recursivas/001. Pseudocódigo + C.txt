@@ -38,13 +38,13 @@ FIM.
 #include <math.h>
 
 void pares_0n(int n){
-	int i;
-
-    	for(i = 0; i <= n; i++){
-        	if(i % 2 == 0){
-            		printf("%d, ", i);
+    if (n < 0){
+        return n;
+    } else{
+        pares_0n(n - 1);
+        } if (n % 2 == 0){
+            printf("%d, ", n);
         }
-    		}
 }
 
 main(){
@@ -65,9 +65,11 @@ main(){
 
 
 
+
 	
 
 	
 	
+
 
 
