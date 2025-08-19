@@ -19,12 +19,16 @@ FIM.
 // ALGORÍTIMO principal
 
 INÍCIO
-	VAR INTEIRO: num; // VARIÁVEIS LOCAIS
+	VAR INTEIRO: num1, num2, resultado; // VARIÁVEIS LOCAIS
+	
+	ESCREVA ("Informe o 1º inteiro: ");
+	LEIA num1;
 
-	ESCREVA ("Informe um número inteiro: ");
-	LEIA num;
-
-	CHAME pares_0n(num);
+	ESCREVA ("Informe o 2º inteiro: ");
+	LEIA num2;
+	
+	resultado = mdc(num1, num2);
+    	ESCREVA("O MDC entre ", num1, " e ", num2, " é: ", resultado);
 FIM.
 
 +---------------+
@@ -36,24 +40,24 @@ FIM.
 #include <conio.h>
 #include <math.h>
 
-void pares_0n(int n){
-	int i;
-
-    	for(i = 0; i <= n; i++){
-        	if(i % 2 == 0){
-            		printf("%d, ", i);
-        }
-    		}
+int mdc(int n1, int n2){
+        if (n2 == 0){
+            return n1;
+        }else
+            return mdc(n2, n1 % n2);
 }
 
 main(){
 	setlocale(LC_ALL, "Portuguese");
-	int num;
+	int num1, num2;
 
-    	printf("Informe um número inteiro: ");
-    	scanf("%d", &num);
+	printf("Informe o 1º inteiro: ");
+	scanf("%d", &num1);
 
-    	pares_0n(num);
+	printf("Informe o 2º inteiro: ");
+	scanf("%d", &num2);
+
+	printf("O MDC entre %d e %d é: %d", num1, num2, mdc(num1, num2));
 }
 
 
@@ -68,3 +72,4 @@ main(){
 
 	
 	
+
