@@ -60,7 +60,7 @@ void cadastro(struct REG_PESSOA lista[]) {
     int pos = procurarEspaco(lista);
 
     if (pos == -1) {
-        printf("Limite de registros atingido! Exclua alguém primeiro.\n");
+        printf("⚠ Limite de registros atingido! Exclua alguém primeiro.\n");
         return;
     }
 
@@ -70,7 +70,7 @@ void cadastro(struct REG_PESSOA lista[]) {
     limpar();
 
     if (procurarCodigo(lista, codigo) != -1) {
-        printf("Código já cadastrado!\n");
+        printf("⚠ Código já cadastrado!\n");
         return;
     }
 
@@ -96,7 +96,7 @@ void excluirPessoa(struct REG_PESSOA lista[]) {
     int pos = procurarCodigo(lista, codigo);
 
     if (pos == -1) {
-        printf("Registro não encontrado!\n");
+        printf("⚠ Registro não encontrado!\n");
         return;
     }
 
@@ -144,7 +144,7 @@ void menu() {
 // ---------------- FUNÇÃO PRINCIPAL ---------------- \\
 
 int main() {
-    setlocale(LC_ALL, "Portuguese_Brazil");
+    setlocale(LC_ALL, "Portuguese");
 
     struct REG_PESSOA lista[TAM];
     inicializarLista(lista);
@@ -175,5 +175,5 @@ int main() {
 
     } while (opcao != 4);
 
-    return 0;
+    return 0;
 }
