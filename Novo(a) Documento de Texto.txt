@@ -3,6 +3,7 @@
 
 #define TAM 10   // numero maximo de cadastros
 
+// Definicao da struct
 struct REG_PESSOA {
     int codigo;
     int excluido;         // 1 = ativo, 0 = excluido
@@ -21,47 +22,45 @@ void inicializarLista(struct REG_PESSOA lista[]) {
     }
 }
 
-// Funcao simples para ler apenas numeros inteiros
-int lerInteiroSimples(const char *mensagem) {
-    int valor;
-    while (1) {
-        printf("%s", mensagem);
-        if (scanf("%d", &valor) == 1) { // leu um inteiro
-            limpar();
-            return valor;
-        } else {
-            printf("Entrada invalida! Digite apenas numeros.\n");
-            limpar(); // limpa o buffer
-        }
-    }
-}
-
+// Procura uma pessoa pelo codigo
 int procurarCodigo(struct REG_PESSOA lista[], int codigo) {
     int i;
     for (i = 0; i < TAM; i++) {
+        // Verifica se o registro esta ativo e se o codigo bate
         if (lista[i].excluido == 1 && lista[i].codigo == codigo) {
+            return i;
+        }
+    }
+    return -1; // nao encontrou
+}
+
+// Procura o primeiro espaco vazio (registro inativo)
+int procurarEspaco(struct REG_PESSOA lista[]) {
+    int i;
+    for (i = 0; i < TAM; i++) {
+        if (lista[i].excluido == 0) {
             return i;
         }
     }
     return -1;
 }
 
-int procurarEspaco(struct REG_PESSOA lista[]) {
-    int i;
-    for (i = 0; i < TAM; i++) {
-        if (lista[i].excluido == 0) return i;
-    }
-    return -1;
-}
+// ---------------- FUNCOES PRINCIPAIS ---------------- //
 
+// Cadastra uma nova pessoa
 void cadastro(struct REG_PESSOA lista[]) {
     int pos = procurarEspaco(lista);
+
     if (pos == -1) {
         printf("Limite de registros atingido! Exclua alguem primeiro.\n");
         return;
     }
 
-    int codigo = lerInteiroSimples("Digite o codigo: ");
+    int codigo;
+    printf("Digite o codigo: ");
+    scanf("%d", &codigo);
+    limpar();
+
     if (procurarCodigo(lista, codigo) != -1) {
         printf("Codigo ja cadastrado!\n");
         return;
@@ -77,8 +76,13 @@ void cadastro(struct REG_PESSOA lista[]) {
     printf("A pessoa foi cadastrada com sucesso!\n");
 }
 
+// Exclui uma pessoa pelo codigo
 void excluirPessoa(struct REG_PESSOA lista[]) {
-    int codigo = lerInteiroSimples("Digite o codigo para excluir: ");
+    int codigo;
+    printf("Digite o codigo para excluir: ");
+    scanf("%d", &codigo);
+    limpar();
+
     int pos = procurarCodigo(lista, codigo);
 
     if (pos == -1) {
@@ -92,13 +96,14 @@ void excluirPessoa(struct REG_PESSOA lista[]) {
     limpar();
 
     if (resposta == 'S' || resposta == 's') {
-        lista[pos].excluido = 0;
+        lista[pos].excluido = 0; // marca como inativo
         printf("O registro foi excluido!\n");
     } else {
         printf("Exclusao cancelada.\n");
     }
 }
 
+// Mostra todos os registros ativos
 void relatorio(struct REG_PESSOA lista[]) {
     printf("+--------------------------+\n");
     printf("|   RELATORIO DE PESSOAS   |\n");
@@ -114,6 +119,7 @@ void relatorio(struct REG_PESSOA lista[]) {
     }
 }
 
+// Mostra o menu principal
 void menu() {
     printf("\n+--------------------------+");
     printf("\n|           MENU           |");
@@ -123,25 +129,39 @@ void menu() {
     printf("| 3 - RELATORIO            |\n");
     printf("| 4 - SAIR                 |");
     printf("\n+--------------------------+\n\n");
+    printf("Escolha: ");
 }
 
+// ---------------- FUNCAO PRINCIPAL ---------------- //
+
 int main() {
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "p");
 
     struct REG_PESSOA lista[TAM];
     inicializarLista(lista);
 
     int opcao;
+
     do {
         menu();
-        opcao = lerInteiroSimples("Escolha: ");
+        scanf("%d", &opcao);
+        limpar();
 
         switch (opcao) {
-            case 1: cadastro(lista); break;
-            case 2: excluirPessoa(lista); break;
-            case 3: relatorio(lista); break;
-            case 4: printf("Encerrando programa...\n"); break;
-            default: printf("Opcao invalida! Tente novamente.\n");
+            case 1:
+                cadastro(lista);
+                break;
+            case 2:
+                excluirPessoa(lista);
+                break;
+            case 3:
+                relatorio(lista);
+                break;
+            case 4:
+                printf("Encerrando programa...\n");
+                break;
+            default:
+                printf("Opcao invalida! Tente novamente.\n");
         }
 
     } while (opcao != 4);
