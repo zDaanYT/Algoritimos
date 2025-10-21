@@ -1,0 +1,18 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTIMO producao
+
+TIPO REG_MAQUINAS = REGISTRO
+	
+FIM_REGISTRO;
+
+ARQUIVO DE REG_MAQUINAS: arq_producao;
+
+
+
++---------------+
+|	C	|
++---------------+
+
