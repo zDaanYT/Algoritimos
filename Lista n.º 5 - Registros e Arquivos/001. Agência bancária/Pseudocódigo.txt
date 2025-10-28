@@ -1,0 +1,118 @@
++----------------+
+|  PSEUDOCÓDIGO  |
++----------------+
+
+ALGORÍTIMO agencia_bancaria
+
+TIPO REG_CONTA = REGISTRO
+	INTEIRO:	num;
+	LITERAL:	operacao, data;
+	REAL:		valor;
+FIM_REGISTRO;
+
+VAR 	credito, debito, dc: ARQUIVO DE REG_CONTA
+
+PROCEDIMENTO grava_credito()
+INÍCIO
+	
+FIM;
+
+PROCEDIMENTO grava_debito()
+INÍCIO
+FIM;
+
+PROCEDIMENTO cria_dc()
+INÍCIO
+	VAR 	REG_CONTA:	aux_d, aux_c;
+		LÓGICO:		achou;
+		INTEIRO:	conta_deb, conta_cred, conta;
+
+	ABRA(credito);
+	ABRA(debito);
+	ABRA(dc);
+
+	ENQUANTO .NÃO. FDA(credito) .OU. .NÃO. FDA(debito)
+	FAÇA
+		SE .NÃO. FDA(credito)
+		ENTÃO
+			LEIA(credito, aux_c);	// CÓPIA DO REGISTRO DO DISCO PARA O ARQUIVO - credito - NA MEMÓRIA.
+
+		SE .NÃO. FDA(debito)
+		ENTÃO
+			LEIA(debito, aux_d);	// CÓPIA DO REGISTRO DO DISCO PARA O ARQUIVO - debito - NA MEMÓRIA.
+		
+		SE aux_c.num == aux_d.num	// GRAVA EM SEQUÊNCIA DEBITO E CRÉDITO.
+		ENTÃO
+			GRAVA(dc, aux_c);
+			AVANÇA(credito, 1);
+
+			GRAVA(dc, aux_d);
+			AVANÇA(debito, 1);	
+		SENÃO
+			SE aux_c.num > aux_d.num
+			ENTÃO
+				conta = aux_c.num;
+				
+				ENQUANTO conta == aux_c .E. .NÃO. FDA(credito) FAÇA
+					AVANÇA(credito, 1);
+					LEIA(credito, aux_c);
+				FIM_ENQUANTO;
+			SENÃO
+				conta = aux_d.num;
+
+				ENQUANTO conta == aux_d.num FAÇA
+					GRAVA(dc, aux_d);
+					AVANÇA(debito, 1);
+					LEIA(debito, aux_d);
+				FIM_ENQUANTO;
+			FIM_SE;
+		FIM_SE;
+
+		SE (FDA(debito))
+		ENTÃO
+			ENQUANTO .NÃO. FDA(credito) FAÇA
+				LEIA(debito, aux_d);
+				GRAVA(dc, aux_d);
+				AVANÇA(debito, 1);
+			FIM_ENQUANTO;
+		FIM_SE;
+	   	
+		FECHA(credito);
+	   	FECHA(debito);
+	   	FECHA(dc);
+				
+FIM;
+
+FUNÇÃO INTEIRO: menu()
+INÍCIO
+	VAR	INTEIRO:	parametro;
+
+	ESCREVA (" 1 - COLETA OS DADOS DE CRÉDITO ");
+	ESCREVA (" 2 - COLETA OS DADOS DE DÉBITO  ");
+	ESCREVA	(" 3 - MOSTRA TABELA ");
+	
+	ESCREVA ("Escolha uma das opções: ");	
+	LEIA (parametro);
+	
+	RETORNE parametro;
+	
+		
+FIM.
+
+// PRINCIPAL
+
+INÍCIO
+	ESCOLHA menu()
+		CASO menu() == 1
+			grava_credito();
+		CASO menu() == 2
+			grava_debito();
+		CASO menu() == 3
+			cria_dc();
+			mostra tabela();
+		SENÃO
+			ESCREVA ("It's over para o betinha!");
+	FIM_ESCOLHA;
+		
+FIM.
+
