@@ -109,10 +109,11 @@ INÍCIO
 			grava_debito();
 		CASO menu() == 3
 			cria_dc();
-			mostra tabela();
+			mostra_tabela();
 		SENÃO
 			ESCREVA ("It's over para o betinha!");
 	FIM_ESCOLHA;
 		
 FIM.
+
 
