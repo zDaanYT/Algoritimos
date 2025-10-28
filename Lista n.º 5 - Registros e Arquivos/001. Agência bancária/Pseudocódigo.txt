@@ -1,4 +1,4 @@
-+----------------+
++----------------
 |  PSEUDOCÓDIGO  |
 +----------------+
 
@@ -112,10 +112,11 @@ INÍCIO
 			cria_dc();
 			mostra_tabela();
 		SENÃO
-			ESCREVA ("It's over para o betinha!");
+			ESCREVA ("It's over pro betinha!");
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
 
