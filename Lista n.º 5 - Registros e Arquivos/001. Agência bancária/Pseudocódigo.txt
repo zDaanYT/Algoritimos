@@ -20,18 +20,23 @@ INÍCIO
 	ESCREVA ("Informe quantos dados serão gravados: ");
 	LEIA n;
 
+	ABRA(credito);
+
 	ENQUANTO n > 0 FAÇA
-        ESCREVA ("Informe o número da conta: ");	LEIA aux_c.num;
+        	ESCREVA ("Informe o número da conta: ");	LEIA aux_c.num;
 		ESCREVA ("Informe a data - dd/mm/aaaa: ");	LEIA aux_c.data;
 	
 		aux_c.operacao = "C";
 
 		ESCREVA ("Informe o valor do crédito: ");	LEIA aux_c.valor;
+
         	GRAVA(credito, aux_c);
         	AVANÇA(credito, 1); 
 		
-			n = n - 1;
+		n = n - 1;
 	FIM_ENQUANTO;
+	
+	FECHA(credito);
 FIM;
 
 PROCEDIMENTO grava_debito()
@@ -42,8 +47,10 @@ INÍCIO
 	ESCREVA ("Informe quantos dados serão gravados: ");
 	LEIA n;
 
+	ABRA(debito);
+
 	ENQUANTO n > 0 FAÇA
-        ESCREVA ("Informe o número da conta: ");	LEIA aux_d.num;
+        	ESCREVA ("Informe o número da conta: ");	LEIA aux_d.num;
 		ESCREVA ("Informe a data - dd/mm/aaaa: ");	LEIA aux_d.data;
 	
 		aux_d.operacao = "D";
@@ -53,8 +60,10 @@ INÍCIO
         	GRAVA(debito, aux_d);
         	AVANÇA(debito, 1); 
 		
-			n = n - 1;
+		n = n - 1;
 	FIM_ENQUANTO;
+	
+	FECHA(debito);
 FIM;
 
 PROCEDIMENTO cria_dc()
@@ -119,13 +128,40 @@ INÍCIO
 				
 FIM;
 
+PROCEDIMENTO mostra_tabela()
+INÍCIO
+	VAR REG_CONTA: aux;
+    	ABRA(dc);
+    
+	ESCREVA("+------------------------------------+\n");
+    	ESCREVA("|  NÚMERO | OPERAÇÃO | VALOR | DATA  |\n");
+    	ESCREVA("+------------------------------------+\n");
+	
+        	ENQUANTO .NÃO. FDA(dc) FAÇA
+        		LEIA(dc, aux);
+        		ESCREVA ("Conta: ", aux.num);
+        		ESCREVA (" | ", aux.operacao);
+        		ESCREVA (" | ", aux.data);
+        		ESCREVA (" |  R$: ", aux.valor);
+        		ESCREVA("\n");
+    		FIM_ENQUANTO;
+	
+    	ESCREVA("+------------------------------------+\n");
+	
+	FECHA(dc);
+FIM;
+
 FUNÇÃO INTEIRO: menu()
 INÍCIO
 	VAR	INTEIRO:	parametro;
 
-	ESCREVA (" 1 - COLETA OS DADOS DE CRÉDITO ");
-	ESCREVA (" 2 - COLETA OS DADOS DE DÉBITO  ");
-	ESCREVA	(" 3 - MOSTRA TABELA ");
+    	ESCREVA("\n+------------------------------------+\n");
+    	ESCREVA("|	           		MENU           		|\n");
+    	ESCREVA("+--------------------------------------+\n");
+    	ESCREVA("| 1 - COLETA OS DADOS DE CRÉDITO		|\n");
+    	ESCREVA("| 2 - COLETA OS DADOS DE DÉBITO		|\n");
+    	ESCREVA("| 3 - CRIA E MOSTRA TABELA				|\n");
+    	ESCREVA("+------------------------------------+\n\n");
 	
 	ESCREVA ("Escolha uma das opções: ");	
 	LEIA (parametro);
@@ -151,9 +187,3 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
-
-
-
-
-
-
