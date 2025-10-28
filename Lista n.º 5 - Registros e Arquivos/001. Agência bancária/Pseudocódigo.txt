@@ -1,4 +1,4 @@
-+----------------
++----------------+
 |  PSEUDOCÓDIGO  |
 +----------------+
 
@@ -14,12 +14,48 @@ VAR 	credito, debito, dc: ARQUIVO DE REG_CONTA
 
 PROCEDIMENTO grava_credito()
 INÍCIO
+	VAR	INTEIRO: n;
+		REG_CONTA: aux_c;
+
+	ESCREVA ("Informe quantos dados serão gravados: ");
+	LEIA n;
+
+	ENQUANTO n > 0 FAÇA
+        	ESCREVA ("Informe o número da conta: ");	LEIA aux_c.num;
+		ESCREVA ("Informe a data - dd/mm/aaaa: ");	LEIA aux_c.data;
 	
+		aux_c.operacao = "C";
+
+		ESCREVA ("Informe o valor do crédito: ");	LEIA 	aux_c.valor;
+
+        	GRAVA(credito, aux_c);
+        	AVANÇA(credito, 1); 
+		
+		n = n - 1;
+	FIM_ENQUANTO;
 FIM;
 
 PROCEDIMENTO grava_debito()
 INÍCIO
+	VAR	INTEIRO: n;
+		REG_CONTA: aux_d;
 
+	ESCREVA ("Informe quantos dados serão gravados: ");
+	LEIA n;
+
+	ENQUANTO n > 0 FAÇA
+        	ESCREVA ("Informe o número da conta: ");	LEIA aux_d.num;
+		ESCREVA ("Informe a data - dd/mm/aaaa: ");	LEIA aux_d.data;
+	
+		aux_d.operacao = "D";
+
+		ESCREVA ("Informe o valor do crédito: ");	LEIA 	aux_d.valor;
+
+        	GRAVA(debito, aux_d);
+        	AVANÇA(debito, 1); 
+		
+		n = n - 1;
+	FIM_ENQUANTO;
 FIM;
 
 PROCEDIMENTO cria_dc()
@@ -116,6 +152,7 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
 
