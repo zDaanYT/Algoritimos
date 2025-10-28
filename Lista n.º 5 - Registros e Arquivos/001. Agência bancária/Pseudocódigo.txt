@@ -19,6 +19,7 @@ FIM;
 
 PROCEDIMENTO grava_debito()
 INÍCIO
+
 FIM;
 
 PROCEDIMENTO cria_dc()
@@ -115,5 +116,6 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
