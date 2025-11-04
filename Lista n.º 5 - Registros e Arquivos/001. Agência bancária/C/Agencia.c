@@ -78,19 +78,26 @@ void grava_debito(){
 
 void cria_dc(){
     REG_CONTA aux_c, aux_d;
-    int conta_cred, conta_deb, conta;
-    
+    int achou, conta_cred, conta_deb, conta;
+
+    credito = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\credito.bin", "ab+");
+    debito  = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\debito.bin", "ab+");
+    dc      = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\dc.bin", "ab+");
+
+    while(!feof(credito) || !feof(debito)){
+        if (!feof(credito)){
+            fread();
+        }
+
+        if (!feof(debito)){
+            f
+        }
+
+    }
 }
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
 
-    dc      = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\dc.bin", "ab+");
-
     return 0;
 }
-
-
-
-
-
