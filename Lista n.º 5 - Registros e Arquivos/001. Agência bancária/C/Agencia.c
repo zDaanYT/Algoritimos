@@ -67,6 +67,8 @@ void grava_debito(){
         fwrite(&aux_d, sizeof(REG_CONTA), 1, debito);
         fseek(debito, sizeof(REG_CONTA), SEEK_CUR);
 
+        n--;
+
     } while(n > 0);
 
     fclose(debito);
@@ -80,4 +82,5 @@ int main(){
 
     return 0;
 }
+
 
