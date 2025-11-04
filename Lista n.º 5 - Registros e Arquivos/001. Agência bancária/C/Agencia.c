@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
-#define ACHOU 1
+#define FALSO 0
+#define VERDADEIRO 1
 
 typedef struct {
     int num;
@@ -88,6 +89,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
