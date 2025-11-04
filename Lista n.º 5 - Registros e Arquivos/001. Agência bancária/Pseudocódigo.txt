@@ -50,12 +50,12 @@ INÍCIO
 	ABRA(debito);
 
 	ENQUANTO n > 0 FAÇA
-        	ESCREVA ("Informe o número da conta: ");	LEIA aux_d.num;
-		ESCREVA ("Informe a data - dd/mm/aaaa: ");	LEIA aux_d.data;
+        ESCREVA ("Informe o número da conta: ");		LEIA aux_d.num;
+		ESCREVA ("Informe a data - dd/mm/aaaa: ");		LEIA aux_d.data;
 	
 		aux_d.operacao = "D";
 
-		ESCREVA ("Informe o valor do crédito: ");	LEIA aux_d.valor;
+		ESCREVA ("Informe o valor do crédito: ");		LEIA aux_d.valor;
 
         	GRAVA(debito, aux_d);
         	AVANÇA(debito, 1); 
@@ -211,5 +211,6 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
