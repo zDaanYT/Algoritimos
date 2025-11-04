@@ -72,7 +72,12 @@ void grava_debito(){
     } while(n > 0);
 
     fclose(debito);
+}
 
+void cria_dc(){
+    REG_CONTA aux_c, aux_d;
+    int conta_cred, conta_deb, conta;
+    
 }
 
 int main(){
@@ -82,5 +87,6 @@ int main(){
 
     return 0;
 }
+
 
 
