@@ -6,6 +6,7 @@ typedef struct {
     int num;
     char operacao[2], data[11];
     float valor;
+
 } REG_CONTA;
 
 FILE *credito, *debito, *dc; // ARQUIVOS
@@ -16,9 +17,10 @@ void grava_credito(){
 
     credito = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\credito.bin", "ab+");
 
+    printf("Informe quantos dados serão gravados: ");
+    scanf("%d", &n);
+
     do{
-        printf("Informe quantos dados serão gravados: ");
-        scanf("%d", &n);
 
         printf("Informe o número da conta: ");
         scanf("%d", &aux_c.num);
@@ -41,13 +43,40 @@ void grava_credito(){
     fclose(credito);
 }
 
+void grava_debito(){
+    int n
+    REG_CONTA aux_d;
+
+    debito = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\debito.bin", "ab+");
+
+    printf("Informe quantos dados serão gravados: ");
+    scanf("%d", &n);
+
+    do{
+        printf("Informe o número da conta: ");
+        scanf("%d", &aux_d.num);
+
+        printf("Informe a data - (dd/MM/AAAA): ");
+        scanf("%c", aux_d.data);
+
+        aux_d.operacao = "D";
+
+        printf("Informe o valor do crédito: ");
+        scanf("%f", aux_d.valor);
+
+        fwrite(&aux_d, sizeof(REG_CONTA), 1, debito);
+        fseek(debito, sizeof(REG_CONTA), SEEK_CUR);
+
+    } while(n > 0);
+
+    fclose(debito);
+
+}
 
 int main(){
     setlocale(LC_ALL, "Portuguese");
 
-    debito  = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\debito.bin", "ab+");
     dc      = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\dc.bin", "ab+");
 
     return 0;
 }
-
