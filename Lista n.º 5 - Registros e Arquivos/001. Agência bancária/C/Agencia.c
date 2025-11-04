@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#define ACHOU 1
 
 typedef struct {
     int num;
@@ -87,6 +88,7 @@ int main(){
 
     return 0;
 }
+
 
 
 
