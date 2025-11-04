@@ -157,7 +157,7 @@ INÍCIO
 	VAR REG_CONTA: aux;
     	ABRA(dc);
     
-	ESCREVA("+------------------------------------+\n");
+		ESCREVA("+------------------------------------+\n");
     	ESCREVA("|  NÚMERO | OPERAÇÃO | VALOR | DATA  |\n");
     	ESCREVA("+------------------------------------+\n");
 	
@@ -211,4 +211,5 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
