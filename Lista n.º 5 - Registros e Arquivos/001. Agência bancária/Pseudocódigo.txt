@@ -86,13 +86,17 @@ INÍCIO
 		ENTÃO
 			LEIA(debito, aux_d);	// CÓPIA DO REGISTRO DO DISCO PARA O ARQUIVO - debito - NA MEMÓRIA.
 		
+		achou = .F.;	
+
 		SE aux_c.num == aux_d.num	// GRAVA EM SEQUÊNCIA DEBITO E CRÉDITO.
 		ENTÃO
 			GRAVA(dc, aux_c);
 			AVANÇA(credito, 1);
 
 			GRAVA(dc, aux_d);
-			AVANÇA(debito, 1);	
+			AVANÇA(debito, 1);
+
+			achou = .V.;	
 		SENÃO
 			SE aux_c.num > aux_d.num
 			ENTÃO
@@ -112,7 +116,11 @@ INÍCIO
 				FIM_ENQUANTO;
 			FIM_SE;
 		FIM_SE;
-
+		
+		SE .NÃO. achou
+		ENTÃO
+			ESCREVA("Conta ", conta, " não possui correspondente entre crédito e débito.");		
+		
 		SE (FDA(debito))
 		ENTÃO
 			ENQUANTO .NÃO. FDA(credito) FAÇA
@@ -121,6 +129,20 @@ INÍCIO
 				AVANÇA(credito, 1);
 			FIM_ENQUANTO;
 		FIM_SE;
+
+	SE FDA(debito)
+	ENTÃO
+		ENQUANTO .NÃO. FDA(credito) FAÇA
+			LEIA(credito, aux_c);
+			GRAVA(dc, aux_c);
+			AVANÇA(credito, 1);
+		FIM_ENQUANTO;
+	SENÃO
+		ENQUANTO .NÃO. FDA(debito) FAÇA
+			LEIA(debito, aux_d);
+			GRAVA(dc, aux_d);
+			AVANÇA(debito, 1);
+		FIM_ENQUANTO;
 	   	
 	FIM_ENQUANTO;
 
