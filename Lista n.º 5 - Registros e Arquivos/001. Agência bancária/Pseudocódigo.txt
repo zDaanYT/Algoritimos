@@ -130,19 +130,19 @@ INÍCIO
 			FIM_ENQUANTO;
 		FIM_SE;
 
-	SE FDA(debito)
-	ENTÃO
-		ENQUANTO .NÃO. FDA(credito) FAÇA
-			LEIA(credito, aux_c);
-			GRAVA(dc, aux_c);
-			AVANÇA(credito, 1);
-		FIM_ENQUANTO;
-	SENÃO
-		ENQUANTO .NÃO. FDA(debito) FAÇA
-			LEIA(debito, aux_d);
-			GRAVA(dc, aux_d);
-			AVANÇA(debito, 1);
-		FIM_ENQUANTO;
+		SE FDA(debito)
+		ENTÃO
+			ENQUANTO .NÃO. FDA(credito) FAÇA
+				LEIA(credito, aux_c);
+				GRAVA(dc, aux_c);
+				AVANÇA(credito, 1);
+			FIM_ENQUANTO;
+		SENÃO
+			ENQUANTO .NÃO. FDA(debito) FAÇA
+				LEIA(debito, aux_d);
+				GRAVA(dc, aux_d);
+				AVANÇA(debito, 1);
+			FIM_ENQUANTO;
 	   	
 	FIM_ENQUANTO;
 
@@ -211,3 +211,4 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
