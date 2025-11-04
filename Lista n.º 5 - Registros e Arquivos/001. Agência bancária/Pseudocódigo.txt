@@ -69,8 +69,8 @@ FIM;
 PROCEDIMENTO cria_dc()
 INÍCIO
 	VAR 	REG_CONTA:	aux_d, aux_c;
-		LÓGICO:		achou;
-		INTEIRO:	conta_deb, conta_cred, conta;
+			LÓGICO:		achou;
+			INTEIRO:	conta_deb, conta_cred, conta;
 
 	ABRA(credito);
 	ABRA(debito);
@@ -211,6 +211,7 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
 
