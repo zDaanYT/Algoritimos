@@ -86,7 +86,21 @@ void cria_dc(){
 
     while(!feof(credito) || !feof(debito)){
         if (!feof(credito)){
-            fread();
+            fread(&aux_c, sizeof(REG_CONTA), 1, credito);
+            achou = FALSO;
+
+            if (aux_c.num == aux_d.num){
+                fwrite(&aux_c, sizeof(REG_CONTA), 1, dc);
+                fseek(credito, sizeof(REG_CONTA), SEEK_CUR);
+
+                fwrite(&aux_d, sizeof(REG_CONTA), 1, dc);
+                fseek(debito, sizeof(REG_CONTA), SEEK_CUR);
+
+                achou = VERDADEIRO;
+            } else if(aux_c.num > aux_d.num){
+
+
+            }
         }
 
         if (!feof(debito)){
