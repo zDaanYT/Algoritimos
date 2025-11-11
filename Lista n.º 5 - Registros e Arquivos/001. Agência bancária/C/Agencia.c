@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+
 #define VERDADEIRO 1
 #define FALSO 0
 
@@ -78,36 +79,72 @@ void grava_debito(){
 
 void cria_dc(){
     REG_CONTA aux_c, aux_d;
-    int achou, conta_cred, conta_deb, conta;
+    int achou, conta;
+    int temCredito, temDebito;
 
-    credito = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\credito.bin", "ab+");
-    debito  = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\debito.bin", "ab+");
-    dc      = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\dc.bin", "ab+");
+    credito = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\credito.bin", "rb");
+    debito  = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\debito.bin", "rb");
+    dc      = fopen("C:\\Users\\Danilo\\Desktop\\Lista n.º 5 - Registros e Arquivos\\001. Agência bancária\\C\\dc.bin", "wb");
 
-    while(!feof(credito) || !feof(debito)){
-        if (!feof(credito)){
-            fread(&aux_c, sizeof(REG_CONTA), 1, credito);
-            achou = FALSO;
+    if (!credito || !debito || !dc) {
+        printf("Erro ao abrir um dos arquivos!\n");
+        exit(1);
+    }
 
-            if (aux_c.num == aux_d.num){
+    temCredito  = fread(&aux_c, sizeof(REG_CONTA), 1, credito);
+    temDebito   = fread(&aux_d, sizeof(REG_CONTA), 1, debito);
+
+    while (temCredito || temDebito) {
+        achou = FALSO;
+
+        if (temCredito && temDebito) {
+            if (aux_c.num == aux_d.num) {
                 fwrite(&aux_c, sizeof(REG_CONTA), 1, dc);
-                fseek(credito, sizeof(REG_CONTA), SEEK_CUR);
-
                 fwrite(&aux_d, sizeof(REG_CONTA), 1, dc);
-                fseek(debito, sizeof(REG_CONTA), SEEK_CUR);
 
                 achou = VERDADEIRO;
-            } else if(aux_c.num > aux_d.num){
 
+                temCredito = fread(&aux_c, sizeof(REG_CONTA), 1, credito);
+                temDebito  = fread(&aux_d, sizeof(REG_CONTA), 1, debito);
+            } else if (aux_c.num > aux_d.num) {
+                conta = aux_c.num;
+
+                while (temDebito && aux_d.num == conta) {
+                    fwrite(&aux_d, sizeof(REG_CONTA), 1, dc);
+                    temDebito = fread(&aux_d, sizeof(REG_CONTA), 1, debito);
+                }
+            } else {
+                conta = aux_c.num;
+
+                while (temCredito && aux_c.num == conta) {
+                    temCredito = fread(&aux_c, sizeof(REG_CONTA), 1, credito);
+                }
 
             }
+        } else if (!temCredito && temDebito) {
+            fwrite(&aux_d, sizeof(REG_CONTA), 1, dc);
+            temDebito = fread(&aux_d, sizeof(REG_CONTA), 1, debito);
+        } else if (!temDebito && temCredito) {
+            temCredito = fread(&aux_c, sizeof(REG_CONTA), 1, credito);
         }
 
-        if (!feof(debito)){
-            f
+        if (achou == FALSO && temCredito && temDebito){
+            printf  ("Conta %d não possui correspondente entre crédito e débito.\n",
+                    (aux_c.num > aux_d.num ? aux_d.num : aux_c.num));
         }
-
     }
+
+    fclose(credito);
+    fclose(debito);
+    fclose(dc);
+
+    printf("\nArquivo DC criado com sucesso!\n");
+}
+
+
+void mostra_tabela(){
+
+
 }
 
 int main(){
