@@ -106,6 +106,7 @@ INÍCIO
 					AVANÇA(credito, 1);
 					LEIA(credito, aux_c);
 				FIM_ENQUANTO;
+
 			SENÃO
 				conta = aux_d.num;
 
@@ -114,6 +115,7 @@ INÍCIO
 					AVANÇA(debito, 1);
 					LEIA(debito, aux_d);
 				FIM_ENQUANTO;
+
 			FIM_SE;
 		FIM_SE;
 		
@@ -211,6 +213,7 @@ INÍCIO
 	FIM_ESCOLHA;
 		
 FIM.
+
 
 
 
