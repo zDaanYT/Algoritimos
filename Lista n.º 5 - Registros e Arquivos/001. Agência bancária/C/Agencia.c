@@ -143,8 +143,18 @@ void cria_dc(){
 
 
 void mostra_tabela(){
+    int aux, temDC;
 
+    temDC   = fread
+        printf("+------------------------------------+\n");
+    	printf("|  NÚMERO | OPERAÇÃO | VALOR | DATA  |\n");
+    	printf("+------------------------------------+\n");
 
+            while () {
+
+            }
+
+        printf("+------------------------------------+\n");
 }
 
 int main(){
