@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
-#define FALSO 0
 #define VERDADEIRO 1
+#define FALSO 0
 
 typedef struct {
     int num;
