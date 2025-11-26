@@ -1,4 +1,4 @@
-# Algoritmos e Programação https://pastebin.com/raw/wsJwU8jF
+# Algoritmos e Programação https://vt.tiktok.com/ZSHThyAo4DUWp-dRDfM/
 
 Olá, nesse repositório estão as atividades propostas para disciplina de Algoritmos e Programação, da UEPG - Universidade Estadual de Ponta Grossa. 
 ## Conteúdo do Repositório
