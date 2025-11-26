@@ -1,4 +1,6 @@
-# Algoritmos e Programação https://vt.tiktok.com/ZSHThyAo4DUWp-dRDfM/
+# Algoritmos e Programação Junte-se a mim no TikTok!
+ 
+ Participe do evento por tempo limitado Gol de Prêmios e ganhe até  R$ 100 em recompensas. https://vt.tiktok.com/ZSHThbB9en2tD-za6ie/
 
 Olá, nesse repositório estão as atividades propostas para disciplina de Algoritmos e Programação, da UEPG - Universidade Estadual de Ponta Grossa. 
 ## Conteúdo do Repositório
