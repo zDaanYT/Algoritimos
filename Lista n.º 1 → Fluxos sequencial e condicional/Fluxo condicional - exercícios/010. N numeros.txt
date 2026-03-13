@@ -1,27 +1,30 @@
-Algoritimo n_numeros
+ALGORÍIIMO n_numeros
 
-inicio
-	var 
-	real: numero;
-	inteiro: i, n_numero; // TOTAIS + INCREMETO
+INÍCIO
+	VAR 	REAL: numero;
+			INTEIRO: i, n_numero; // TOTAIS + INCREMETO
 
 
-	escreva "Quantos números deseja analisar? "; leia n_numero;
+	ESCREVA ("Quantos números deseja analisar? "); LEIA n_numero;
 
-	para i de 1 até n_numero faça
-		escreva "Analise nº",i;
-		escreva "Informe um número: "; leia numero;
+	PARA i DE 1 ATÉ n_numero FAÇA
+		ESCREVA ("Analise nº",i);
+		ESCREVA ("Informe um número: "); LEIA numero;
 		
-		se numero > 0
-			então escreva numero," é positivo.";
-			senão se numero < 0
-				então escreva numero," é negativo.";
-				senão se numero == 0
-					escreva numero," é nulo.";			
+		SE numero > 0
+			ENTÃO 
+				ESCREVA (numero," é positivo.");
+			SENÃO 
+				SE numero < 0
+					ENTÃO 
+						ESCREVA (numero," é negativo.");
+					SENÃO 
+						SE numero == 0
+							ENTÃO
+								ESCREVA (numero," é nulo.");			
 	
-	fim_para;
-
-fim.
+	FIM_PARA;
+FIM.
 
 
 EM C
@@ -54,17 +57,13 @@ main(){
 
 				if(numero > 0){
 					printf("%1.0f, é positivo.\n\n", numero);
-				}else if(numero < 0){
-					printf("%1.0f, é negativo.\n\n", numero);
-					}else if(numero == 0){
-						printf("%1.0f, é nulo.\n\n", numero);
+				}else 
+					if(numero < 0){
+						printf("%1.0f, é negativo.\n\n", numero);
+					}else 
+						if(numero == 0){
+							printf("%1.0f, é nulo.\n\n", numero);
 						}else
-                            				printf("%1.0f, é inválido.\n\n", numero);
-
-
+                            printf("%1.0f, é inválido.\n\n", numero);
 		}
-
-
-
-
 }
