@@ -31,8 +31,8 @@ INÍCIO
 				ESCREVA ("O estabelecimento não teve lucro e nem prejuízo.");			
 	FIM_PARA;
 
-		ESCREVA "A media dos preços de custos é de R$: ", soma_custos / 40;
-		ESCREVA "A media dos preços de vendas é de R$:  ", soma_vendas / 40;
+		ESCREVA ("A media dos preços de custos é de R$: ", soma_custos / 40);
+		ESCREVA ("A media dos preços de vendas é de R$: ", soma_vendas / 40);
 
 FIM.
 
