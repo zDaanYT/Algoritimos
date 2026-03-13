@@ -69,7 +69,7 @@ main(){
     	if(media <= 5.0)
         	printf("O(A) aluno(a) %s com a média %1.1f, está reprovado(a)!", nome, media);
 
-   	if(media <= 5.1 && media <= 6.9)
+   		if(media <= 5.1 && media <= 6.9)
         	printf("O(A) aluno(a) %s com a média %1.1f, está reprovado(a)!\n", nome, media);
 
 }
