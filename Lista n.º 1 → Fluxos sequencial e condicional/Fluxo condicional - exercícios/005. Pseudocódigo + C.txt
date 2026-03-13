@@ -5,10 +5,10 @@
 ALGORÍTIMO maior_idade
 
 INÍCIO
-	VAR INTEIRO: idade, i;
+	VAR 	INTEIRO: idade, i;
 
 	PARA i DE 1 ATÉ 50 FAÇA
-		ESCREVA "Informe a ",i,"ª idade"; LEIA idade;
+		ESCREVA ("Informe a ",i,"ª idade"); LEIA idade;
 
 		SE idade >= 18
 		ENTÃO 
@@ -17,11 +17,10 @@ INÍCIO
 			ESCREVA "A pessoa n.º",i," é menor de idade!";
 	
 	FIM_PARA;
-
 FIM.
 
 +---------------+
-|	C	|
+|		C		|
 +---------------+
 
 #include <stdio.h>
