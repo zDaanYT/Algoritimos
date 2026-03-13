@@ -12,9 +12,9 @@ INÍCIO
 
 		SE idade >= 18
 		ENTÃO 
-			ESCREVA "A pessoa n.º",i," é maior de idade!";
+			ESCREVA ("A pessoa n.º",i," é maior de idade!");
 		SENÃO
-			ESCREVA "A pessoa n.º",i," é menor de idade!";
+			ESCREVA ("A pessoa n.º",i," é menor de idade!");
 	
 	FIM_PARA;
 FIM.
