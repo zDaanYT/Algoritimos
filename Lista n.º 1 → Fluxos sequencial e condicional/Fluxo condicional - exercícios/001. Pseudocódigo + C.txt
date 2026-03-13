@@ -27,7 +27,7 @@ FIM.
 
 
 +---------------+
-|	C	|
+|		C		|
 +---------------+
 
 #include <stdio.h>
@@ -55,7 +55,6 @@ main(){
 			printf("%d",v2);
 		}else
 			printf("Os valores são iguais!");
-
 }
 
 
