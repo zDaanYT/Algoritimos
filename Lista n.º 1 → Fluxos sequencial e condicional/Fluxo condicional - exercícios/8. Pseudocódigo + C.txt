@@ -5,32 +5,30 @@
 ALGORÍTIMO venda_condicional
 
 INÍCIO
-	VAR 
-	REAL: p_custo, p_venda, soma_custos, soma_vendas; // PREÇOS E SOMAS
-	INTEIRO: i;
+	VAR 	REAL: p_custo, p_venda, soma_custos, soma_vendas; // PREÇOS E SOMAS
+			INTEIRO: i;
 	
 	soma_custos = 0;
 	soma_vendas = 0;
 	i = 0;
 
 	PARA i DE 1 ATÉ 40 FAÇA
-		ESCREVA "Produto n. º", i;
-		ESCREVA "Informe o preço de custo R$: "; LEIA p_custo;
-		ESCREVA "Informe o preço de venda R$: "; LEIA p_venda;
+		ESCREVA ("Produto n. º", i);
+		ESCREVA ("Informe o preço de custo R$: "); LEIA p_custo;
+		ESCREVA ("Informe o preço de venda R$: "); LEIA p_venda;
 	
 		soma_custos = soma_custos + p_custo;
 		soma_vendas = soma_vendas + p_venda;		
 
 		SE p_venda > p_custo
 		ENTÃO 
-			ESCREVA "O estabelecimento teve lucro!";
+			ESCREVA ("O estabelecimento teve lucro!");
 		SENÃO 
 			SE p_venda < p_custo
 			ENTÃO 
-				ESCREVA "O estabelecimento teve prejuízo!";
+				ESCREVA ("O estabelecimento teve prejuízo!");
 			SENÃO
-				ESCREVA "O estabelecimento não teve lucro e nem prejuízo.";			
-	
+				ESCREVA ("O estabelecimento não teve lucro e nem prejuízo.");			
 	FIM_PARA;
 
 		ESCREVA "A media dos preços de custos é de R$: ", soma_custos / 40;
@@ -39,11 +37,12 @@ INÍCIO
 FIM.
 
 +---------------+
-|	C	|
+|		C		|
 +---------------+
 
 #include <stdio.h>
 #include <locale.h>
+#define MAX 40  
 
 main(){
 
@@ -52,33 +51,33 @@ main(){
 	float p_custo, p_venda, soma_custos = 0, soma_vendas = 0;
 	int i; // TOTAIS + INCREMETO
 
-	for(i = 1; i <= 2; i++){
-        	printf("--------------------------");
+	for(i = 1; i <= MAX; i++){
+        printf("--------------------------");
 		printf("\n\n       Produto n. º %d\n\n", i);
-       		printf("--------------------------\n\n");
+       	printf("--------------------------\n\n");
 
-	    	printf("\nInforme o preço de custo: R$ ");
+    	printf("\nInforme o preço de custo: R$ ");
 		scanf(" %f", &p_custo);
 
-        	printf("Informe o preço de venda: R$ ");
-        	scanf(" %f", &p_venda);
+        printf("Informe o preço de venda: R$ ");
+        scanf(" %f", &p_venda);
 
 		soma_custos = soma_custos + p_custo;
 		soma_vendas = soma_vendas + p_venda;
 
 		if(p_venda > p_custo){
-            		printf("\nO estabelecimento teve lucro!\n\n");
+        	printf("\nO estabelecimento teve lucro!\n\n");
 		}else 
 			if(p_venda < p_custo){
-        			printf("\nO estabelecimento teve prejuízo!\n\n");
-        		}else
-            			printf("\nO estabelecimento não teve lucro e nem prejuízo.\n\n");
+        		printf("\nO estabelecimento teve prejuízo!\n\n");
+        	}else
+            	printf("\nO estabelecimento não teve lucro e nem prejuízo.\n\n");
 	}
 
-	    	printf("--------------------------");
+	    printf("--------------------------");
 	   	printf("\n\n       Resultados \n\n", i);
 	   	printf("--------------------------\n\n");
-		printf("A media dos preços de custos é de R$ %1.2f\n", soma_custos / 40);
-		printf("A media dos preços de vendas é de R$ %1.2f\n", soma_vendas / 40);
+		printf("A media dos preços de custos é de R$ %1.2f\n", soma_custos / MAX);
+		printf("A media dos preços de vendas é de R$ %1.2f\n", soma_vendas / MAX);
 
 }
